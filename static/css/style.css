@@ -66,7 +66,7 @@ nav > ul > li > a {
     color: black;
 }
 nav > ul > li >a:hover {
-    color: var(--green);
+    color: var(--brown);
 }
 main {
     scroll-behavior: smooth;
@@ -153,13 +153,14 @@ h2 {
     font-family: 'Rubik', Helvetica, Arial, sans-serif;
 }
 .services-style {
-    background-color: var(--green);
-    color: white;
+    background-color: var(--yellow);
+    color: #242424;
     background-image: url(/static/img/frutas-line.svg);
     background-position: 98% 98%;
     background-repeat: no-repeat;
     background-size: 80%;
     background-size:contain;
+    background-blend-mode: color-burn;
 }
 .services-layout {
     display: flex;
@@ -213,16 +214,16 @@ h2 {
     bottom: -16px;
     left: 0;
     right: 0;
-    background-image: url('/static/img/sol-tendal-blue.svg');
+    background-image: url('/static/img/sol-tendal.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     /* z-index: -1; */
 }
 .us-style {
-    background-color: var(--blue);
+    background-color: var(--brown);
     color: white;
-    border-bottom: 1px solid #14254d;
+    border-bottom: 1px solid #260e14;
 }
 .story-content > p > a {
     color: white;
@@ -242,7 +243,7 @@ h2 {
 }
 .values {
     padding-top: 7em;
-    background-color: var(--dark-blue);
+    background-color: var(--dark-brown);
     color: white;
 }
 .form {
@@ -278,7 +279,7 @@ h2 {
     margin-top: -0.8em;
 }
 .info-item > p > a {
-    color: var(--green);
+    color: var(--brown);
 }
 footer {
     border-top: 1px solid #eee;

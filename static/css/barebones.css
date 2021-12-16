@@ -65,7 +65,9 @@ html {
   --green: #1d8263;
   --blue: #1f3872;
   --dark-blue: #172953;
-  --yellow: #fcb45b;
+  --yellow: #ffb81c;
+  --brown: #782f40;
+  --dark-brown: #4f1e2a;
 
 	/* Note: Skeleton was based off a 10px font sizing for REM  */
 	/* 62.5% of typical 16px browser default = 10px */
@@ -261,7 +263,7 @@ input[type="reset"]:focus,
 input[type="button"]:focus {
   color: white;
   border-color: var(--text-color-softer);
-  background-color: var(--green);
+  background-color: var(--brown);
   outline: 0; }
 .button.button-primary,
 button.button-primary,
