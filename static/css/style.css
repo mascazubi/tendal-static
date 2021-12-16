@@ -404,7 +404,7 @@ footer > p {
     .story > img {
         max-height: 380px;
         max-width: 575px;
-        margin-bottom: 3em;
+        /* margin-bottom: 3em; */
         border-radius: 4px;
     }
     .product {
