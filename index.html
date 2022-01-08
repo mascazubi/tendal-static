@@ -23,9 +23,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"> 
-     
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">  
     <link rel="icon" type="image/png" href="img/favicon.png">
+    <meta name="theme-color" content="#ffffff" />
 </head>
     <body>
         <div class="wrapper">
@@ -41,12 +41,13 @@
             <nav>
                 <ul>
                   <li><a href="#productos">Productos</a></li>
+                  <li><a href="#pedidos">Pedidos</a></li>
                   <li><a href="#servicios">Servicios</a></li>
                   <li><a href="#calidad">Calidad</a></li>
                   <li><a href="#nosotros">Nosotros</a></li>
                   <li><a href="#contacto">Contacto</a></li>
                 </ul>
-              </nav>
+            </nav>
             <main>
                 <!-- hero -->
                 <section class="hero">
@@ -63,58 +64,64 @@
                 <section class="products-style">
                     <h1>Productos</h1>
                     <div class="products-layout">
-                        <div class="product">
-                            <img src="/static/img/mango1.jpg" alt="mango desidratado">
+                        <div class="product manzana">
+                            <img src="/static/img/mango1.jpg" alt="manzana desidratada">
                             <div class="product-content b-pad">
                                 <h2>Manzana</h2>
                                 <p>
                                     Fruta seleccionada de plantaciones nacionales con las debidas labores de poscosecha y control de calidad permanente e inocuidad en el proceso.
                                 </p>
+                                <button id="" class="opciones">Opciones</button>
                             </div>
                         </div>
-                        <div class="product">
-                            <img src="/static/img/mango1.jpg" alt="mango desidratado">
+                        <div class="product frutilla">
+                            <img src="/static/img/mango1.jpg" alt="frutilla desidratada">
                             <div class="product-content b-pad">
                                 <h2>Frutilla</h2>
                                 <p>
                                     Fruta seleccionada de plantaciones nacionales con las debidas labores de poscosecha y control de calidad permanente e inocuidad en el proceso.
                                 </p>
+                                <button id="" class="opciones">Opciones</button>
                             </div>
                         </div>
-                        <div class="product">
+                        <div class="product mango">
                             <img src="/static/img/mango1.jpg" alt="mango desidratado">
                             <div class="product-content b-pad">
                                 <h2>Mango</h2>
                                 <p>
                                     El mango deshidratado de TENDAL viene en tajadas de pulpa de mango, tajadas de un fruto que ha llegado a su punto de maduración en su árbol, cosechado y transportado a nuestras instalaciones cuidando su integridad física y almacenado hasta que llegue a la madurez perfecta para ser procesado en ambiente 100% inocuo, conservando sus características nutricionales y organolépticas para goce y deleite del consumidor final.
                                 </p>
+                                <button id="" class="opciones">Opciones</button>
                             </div>
                         </div>
-                        <div class="product">
+                        <div class="product pina">
                             <img src="/static/img/pinapple1.jpg" alt="piña desidratada">
                             <div class="product-content b-pad">
                                 <h2>Piña</h2>
                                 <p>
                                     La piña deshidratada de TENDAL viene en tajadas o pedazos de pulpa de piña cultivada en las mejores fincas del país, cosechada y seleccionada con dedicación y transportada cuidando su integridad física y procesada en ambiente 100% inocuo, conservando sus características nutricionales y organolépticas para goce y deleite del consumidor final.
                                 </p>
+                                <button id="" class="opciones">Opciones</button>
                             </div>
                         </div>
-                        <div class="product">
+                        <div class="product papaya">
                             <img src="/static/img/papaya1.jpg" alt="papaya desidratada">
                             <div class="product-content b-pad">
                                 <h2>Papaya</h2>
                                 <p>
                                     La papaya deshidratada de TENDAL viene en tajadas o pedazos de pulpa de papaya que ha llegado a su punto de maduración en su mata, cosechada y seleccionada con dedicación, transportada cuidando su integridad fisica y procesada en ambiente 100% inocuo, conservando íntegramente sus características nutricionales  y organolépticas para goce y deleite del consumidor final.
                                 </p>
+                                <button id="" class="opciones">Opciones</button>
                             </div>
                         </div>
-                        <div class="product">
-                            <img src="/static/img/mango1.jpg" alt="mango desidratado">
+                        <div class="product pitahaya">
+                            <img src="/static/img/mango1.jpg" alt="pitahaya desidratada">
                             <div class="product-content b-pad">
                                 <h2>Pitahaya</h2>
                                 <p>
                                     Fruta seleccionada de plantaciones nacionales con las debidas labores de poscosecha y control de calidad permanente e inocuidad en el proceso.
                                 </p>
+                                <button id="" class="opciones">Opciones</button>
                             </div>
                         </div>
                     </div>
@@ -135,20 +142,39 @@
                         </div>
                     </div>
                 </section>
+                <!-- offerta -->
+                <a name="offerta"></a>
+                <section class="offer">
+                    <h1>Oferta Especial</h1>
+                    <p>Ofrecemos a nuestros clientes deshidratar cualquier hortofrutícola de su interés, sea como producto final o como insumo de otros productos agroalimenticios desarrollados o por desarrollar, bajo condiciones negociadas.</p>                    
+                </section>
+                <!-- pedidos -->
+                <a name="pedidos"></a>
+                <section class="pedidos">
+                    <h1>Informacion y Pedidos</h1>
+                    <a href="tel:+593-099-988-2216">
+                        <div>
+                            <p>Llamanos o mandanos un mensaje</p>
+                            <div class="number">
+                                <span></span><p>099-988-2216</p>
+                            </div>  
+                        </div>
+                    </a>
+                </section>
                 <!-- servicios -->
                 <a name="servicios"></a>
                 <section class="services-style">
                     <h1>Servicios</h1>
                     <div class="services-layout">
                         <div class="service b-pad">
-                            <img src="/static/img/bandejas3.jpg" alt="producto deshidratado">
+                            <img src="/static/img/bandejas3.jpg" alt="servicio de deshidratado">
                             <h2>Deshidratado</h2>
                             <p>
                                 El proceso por el cual se remueve el agua o humedad contenida en frutos maduros y frescos, generalmente pelados, cortados y/o acondicionados en bandejas de acero inoxidable grado alimenticio en cámaras herméticamente cerradas y expuestos a flujo de aire caliente generado en los colectores solares; es decir, alimentos deshidratados usando energía solar térmica, protegidos de los rayos UV y más elementos contaminantes del medio ambiente, conocido técnicamente como sistema de deshidratado solar pasivo.
                             </p>
                         </div>
                         <div class="service b-pad">
-                            <img src="" alt="producto secado">
+                            <img src="" alt="servicio de secado">
                             <h2>Secado</h2>
                             <p>
                                 Es el proceso por el cual se remueve el agua o humedad contenida en agro alimentos, generalmente enteros y/o con cascara que los protege de los elementos, generalmente aptos para el consumo humano o animal (alfalfa, maíz, frejol, yuca, plátano, café, cacao, hierbas aromáticas o medicinales, etc.) en ambiente aislado y controlado; globalmente conocido como secado solar activo, de manera que, una vez seco, se pueda almacenar y prolongar su vida útil como alimento o materia prima para procesos en la industria alimenticia a nivel comercial.
@@ -194,7 +220,7 @@
                                 <div class="story-content b-pad">
                                     <h2>Innovadores</h2>
                                     <p>
-                                        Somos ecuatorianos innovadores en el uso de energía solar térmica para deshidratar y secar alimentos hortofrutícolas y pescados aptos para consumo humano, sin añadir azúcar o químicos en el proceso. Buscamos autosuficiencia en el uso de energía limpia en una planta modelo en <a href="#map">El Valle del Chota, Ecuador.</a>
+                                        Somos ecuatorianos innovadores en el uso de energía solar térmica para deshidratar y secar alimentos hortofrutícolas y pescados aptos para consumo humano, sin añadir azúcar o químicos en el proceso. Buscamos autosuficiencia en el uso de energía limpia en una planta modelo en <a rel="nofollow" href="https://www.google.com/maps/search/El+Valle+del+Chota+Ecuador/@0.4341068,-77.9782052,8896m/data=!3m1!1e3!5m1!1e4?hl=en">El Valle del Chota, Ecuador.</a>
                                     </p>
                                 </div>
                             </div>
@@ -212,34 +238,43 @@
                 <section class="values">
                     <div class="values-layout">
                         <div class="value b-pad">
-                            <img src="/static/img/road.jpg" alt="">
-                                <h2>Missión</h2>
-                                <p>
-                                    Ofrecer al consumidor educado y a la industria procesadora de alimentos, la máxima calidad de frutas y vegetales deshidratados que maximizan la conservación de sus propiedades nutricionales y organolépticas de manera que el consumidor tenga una experiencia superior, saludable y gratificante.
-                                </p>
+                            <input type="radio" id="rd1" name="rd" class="accordion">
+                                <label for="rd1" class="tab-label"><h2>Missión</h2></label>
+                                <div class="tab-content">
+                                    <p>
+                                        Ofrecer al consumidor educado y a la industria procesadora de alimentos, la máxima calidad de frutas y vegetales deshidratados que maximizan la conservación de sus propiedades nutricionales y organolépticas de manera que el consumidor tenga una experiencia superior, saludable y gratificante.
+                                    </p>
+                                </div>
                         </div>
                         <div class="value b-pad">
-                            <img src="" alt="">
-                                <h2>Visión</h2>
-                                <p>
-                                    Deshidratar alimentos hortofrutícolas usando energía solar térmica (limpia, gratuita e inagotable), dejando atrás el uso generalizado de energía fósil que dejan huellas negativas en el medio ambiente; al tiempo que apoyamos a pequeños y medianos productores del abuso de intermediarios y las leyes de mercado en tiempo de cosecha.
-                                </p>
+                            <input type="radio" id="rd2" name="rd" class="accordion">
+                                <label for="rd2" class="tab-label"><h2>Visión</h2></label>
+                                <div class="tab-content">
+                                    <p>
+                                        Deshidratar alimentos hortofrutícolas usando energía solar térmica (limpia, gratuita e inagotable), dejando atrás el uso generalizado de energía fósil que dejan huellas negativas en el medio ambiente; al tiempo que apoyamos a pequeños y medianos productores del abuso de intermediarios y las leyes de mercado en tiempo de cosecha.
+                                    </p>
+                                </div>                                
                         </div>
                         <div class="value b-pad">
-                            <img src="" alt="">
-                                <h2>Responsabilidad Social Corporativa</h2>
-                                <p>
-                                    La responsabilidad social es progresivamente incorporada al valor agregado. Desde el cultivo y la relación estable de largo plazo y respetuosa con nuestros proveedores pagando precios justos, pasando por el uso de energía limpia e inagotable, Buenas Prácticas de Manufactura, BPM y protegiendo el medio ambiente, generamos trabajo dignamente remunerado para nuestros colaboradores.
-                                </p>
+                            <input type="radio" id="rd3" name="rd" class="accordion">
+                                <label for="rd3" class="tab-label"><h2>Responsabilidad Social Corporativa</h2></label>
+                                <div class="tab-content">
+                                    <p>
+                                        La responsabilidad social es progresivamente incorporada al valor agregado. Desde el cultivo y la relación estable de largo plazo y respetuosa con nuestros proveedores pagando precios justos, pasando por el uso de energía limpia e inagotable, Buenas Prácticas de Manufactura, BPM y protegiendo el medio ambiente, generamos trabajo dignamente remunerado para nuestros colaboradores.
+                                    </p>
+                                </div>
+                        </div>
+                        <div class="value b-pad">
+                            <input type="radio" id="rd4" name="rd" class="accordion">
+                                <label for="rd4" class="tab-close">&times;</label>
                         </div>
                     </div>
                 </section>
-                <!-- contacto -->
                 <a name="contacto"></a>
+                <!-- contacto -->
                 <section class="contact">
-                    <h1>Contacto</h1>
                     <div class="form-map">
-                        <div class="contact-form-container b-pad">
+                        <!-- <div class="contact-form-container b-pad">
                             <h2>¡Envianos un mensaje!</h2>
                             <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mbjqbbry" method="post" class="form">
                                 <fieldset id="fs-frm-inputs">
@@ -258,7 +293,7 @@
                                 <input type="submit" value="Mandar">
                               </form>
                               <a name="map"></a>
-                        </div>
+                        </div> -->
                         <div class="map">
                             <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-78.06532859802248%2C0.4677720556660203%2C-78.04706811904909%2C0.48004542424839575&amp;layer=mapnik&amp;marker=0.47390874267551364%2C-78.05619835853577"></iframe>
                         </div>
@@ -275,7 +310,7 @@
                         <div class="info-item">
                             <h2>Telefono</h2>
                             <p>
-                                <a href="tel:+593-099-362-56403">+593-099-362-5640</a>
+                                <a href="tel:+593-099-988-2216">+593-099-988-2216</a>
                             </p>
                         </div>
                         <div class="info-item">
@@ -295,9 +330,10 @@
                 </section>
             </main>
             <footer>
-                <p>
-                    © 2021 <b>TENDAL</b>
-                </p>
+                <div class="b-pad">
+                    <p>© 2021 <b>TENDAL</b></p>
+                    <a href="https://wa.me/5930999882216?text=Hola"><span class="wapp"></span></a>
+                </div>
             </footer>
         </div>
     </body>
