@@ -11,7 +11,7 @@ html {
     --brown: #782f40;
     --dark-brown: #4f1e2a;
     /* product colors */
-    --mango: #ffab2a;
+    --mango: #ff912a;
     --manzana: rgb(214, 0, 0);  
     --pitahaya: rgb(221, 199, 0);
     --frutilla: rgb(248, 100, 100);
@@ -94,13 +94,17 @@ nav:after {
     background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.301), white);
 }
 nav > ul > li {
-    margin-right: 1.7em;
+    margin-right: calc((100vw - 278.5px)/3);
     margin-bottom: 0.8em;
     margin-top: 0.7em;
+    white-space: nowrap;
 }
 nav > ul > li > a {
     text-decoration: none;
     color: black;
+    width: 70px;
+    display: inline-block;
+    text-align: center;
 }
 /* nav > ul > li >a:hover {
     color: var(--yellow);
@@ -176,7 +180,11 @@ h1 {
     margin-right: auto;
     margin-left: auto;
 }
-.product > img {
+.product > a.opciones {
+    margin-left: auto;
+    margin-right: auto;
+}
+img.product-img {
     background-color: var(--background-color-softer);
     width: var(--prod-img-size);
     height: var(--prod-img-size);
@@ -235,10 +243,10 @@ h1 {
     margin-right: auto;
     margin-bottom: 1em;
 }
-button.opciones  {
+a.opciones  {
     margin-right: auto;
     height: max-content;
-    padding: 0 12px;
+    padding: .6em 1.5em;
     font-size: 14px;
     font-weight: normal;
     line-height: 30px;
@@ -246,28 +254,211 @@ button.opciones  {
     text-transform: unset;
     border-radius: 8px;
     border: none;
+    background-image: none;
+
 }
-.mango > .product-content > button.opciones {
+[id^=modal] {
+    display: none;
+    position: fixed;
+    top: calc(50% - 42vh);
+    left: calc(50% - 38vw);
+    /* transform: translate(-50%,-50%); */
+    width: 69vw;
+    border-radius: 2em;
+    padding: 1em 1em 1em 1em;
+    flex-direction: column;
+    z-index: 3;
+    justify-content: space-between;
+    -webkit-animation: scale-up-center 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    animation: scale-up-center 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+}
+#modalManzana {
+    box-shadow:
+0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+0px 12.5px 10px var(--manzana-light),
+0px 22.3px 17.9px var(--manzana-light),
+0px 41.8px 33.4px var(--manzana-light),
+0px 100px 80px rgba(0, 0, 0, 0.07);
+}
+#modalFrutilla {
+    box-shadow:
+    0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    0px 12.5px 10px var(--frutilla-light),
+    0px 22.3px 17.9px var(--frutilla-light),
+    0px 41.8px 33.4px var(--frutilla-light),
+    0px 100px 80px rgba(0, 0, 0, 0.07);
+}
+#modalPina {
+    box-shadow:
+    0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    0px 12.5px 10px var(--pina-light),
+    0px 22.3px 17.9px var(--pina-light),
+    0px 41.8px 33.4px var(--pina-light),
+    0px 100px 80px rgba(0, 0, 0, 0.07);
+}
+#modalMango {
+    box-shadow:
+    0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    0px 12.5px 10px var(--mango-light),
+    0px 22.3px 17.9px var(--mango-light),
+    0px 41.8px 33.4px var(--mango-light),
+    0px 100px 80px rgba(0, 0, 0, 0.07);
+}
+#modalPapaya {
+    box-shadow:
+    0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    0px 12.5px 10px var(--papaya-light),
+    0px 22.3px 17.9px var(--papaya-light),
+    0px 41.8px 33.4px var(--papaya-light),
+    0px 100px 80px rgba(0, 0, 0, 0.07);
+}
+#modalPitahaya {
+    box-shadow:
+    0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    0px 12.5px 10px var(--pitahaya-light),
+    0px 22.3px 17.9px var(--pitahaya-light),
+    0px 41.8px 33.4px var(--pitahaya-light),
+    0px 100px 80px rgba(0, 0, 0, 0.07);
+}
+#modalManzana:target,
+#modalFrutilla:target,
+#modalPina:target,
+#modalMango:target,
+#modalPapaya:target,
+#modalPitahaya:target,
+.scale-up-center
+ {
+    display: flex;
+    overflow-y: scroll;
+}
+.op {
+    color: white;
+}
+ .op-manzana {
+    background-color: var(--manzana);
+ 
+ }
+ .op-frutilla {
+    background-color: var(--frutilla);
+ }
+ .op-pina {
+    background-color: var(--pina);
+ }
+ .op-papaya {
+    background-color: var(--papaya);
+ }
+ .op-mango {
+    background-color: var(--mango);
+ }
+ .op-pitahaya {
+    background-color: var(--pitahaya);
+ }
+.op-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+.op-item-img {
+    border-radius: 100%;
+    width:190px;
+    height: 190px;
+    margin-bottom: 1em;
+    border: 5px solid #0000000f;
+}
+.op-item-name {
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 0;
+    font-family: var(--rubik);
+    line-height: 1;
+}
+.op-item-price {
+    font-family: var(--rubik);
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.op-close {
+    text-align: center;
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.842);
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #00000021;
+    border-radius: 50%;
+    align-self: flex-end;
+    line-height: 1.3;
+    font-weight: 600;
+    position: relative;
+}
+.op-close::after {
+    content: 'x';
+    position: absolute;
+    top: 3px;
+    left: 13px;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2022-1-9 13:43:36
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-up-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
+.mango > .product-content > a.opciones {
     color: #e88c00;
     background-color: var(--mango-light);
 }
-.frutilla > .product-content > button.opciones {
+.frutilla > .product-content > a.opciones {
     color: var(--frutilla);
     background-color: var(--frutilla-light);
 }
-.pina > .product-content > button.opciones {
+.pina > .product-content > a.opciones {
     color: #d08f00;
     background-color: var(--pina-light);
 }
-.manzana > .product-content > button.opciones {
+.manzana > .product-content > a.opciones {
     color: var(--manzana);
     background-color: var(--manzana-light);
 }
-.papaya > .product-content > button.opciones {
+.papaya > .product-content > a.opciones {
     color: var(--papaya);
     background-color: var(--papaya-light);
 }
-.pitahaya > .product-content > button.opciones {
+.pitahaya > .product-content > a.opciones {
     color: rgb(176, 159, 0);
     background-color: var(--pitahaya-light);
 }
