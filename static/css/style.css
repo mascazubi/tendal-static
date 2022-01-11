@@ -63,6 +63,11 @@ section a:hover, section a:focus, nav a:hover, nav a:focus{
 .logo {
     height: 10em;
 }
+.tendal-inline {
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
 nav {
     position: sticky;
     border-bottom: 1px solid #eee;
@@ -205,7 +210,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
     text-align: center;
-    padding: 3em 0 2.5em 0;
+    padding-top: 3em;
+    padding-right: 0;
+    padding-bottom: 2.5em;
+    padding-left: 0;
     margin-bottom: 0;
 }
 .product {
@@ -287,7 +295,6 @@ a.opciones  {
     border-radius: 8px;
     border: none;
     background-image: none;
-
 }
 [id^=modal] {
     display: none;
@@ -572,6 +579,38 @@ a.opciones  {
     background-size:contain;
     background-blend-mode: color-burn;
 }
+.services-style > h1,
+.qualities-style > h1 {
+    padding-bottom: 1.8em;
+}
+.services-layout > p,
+.qualities-layout > p {
+    margin-bottom: 4em;
+    text-align: center;
+}
+.services-layout a {
+    color: #cc701a;
+    background-color: white;
+}
+.services-layout a,
+.qualities-layout a,
+.stories a,
+.value a {
+    white-space: nowrap;
+    padding: .1em .5em;
+    margin: 0 3px;
+    font-weight: normal;
+    line-height: 1.2;
+    border-radius: 8px;
+    border: none;
+    background-image: none;
+}
+.service-extra {
+    padding: 1.5em;
+    background-color: rgba(4, 4, 4, 0.07);
+    border-radius: 8px;
+    color: white;
+}
 .products-layout,
 .services-layout,
 .qualities-layout
@@ -621,6 +660,10 @@ a.opciones  {
     background-color: white;
     color: black;
 }
+.qualities-layout a {
+    color: white;
+    background-color: rgb(70, 70, 70);
+}
 /* .qualities-style::after {
     content: '';
     position: absolute;
@@ -639,18 +682,22 @@ a.opciones  {
     color: white;
     padding-bottom: 1em;
 }
-.story-content > p > a {
+/* .story-content > p > a {
     color: white;
 }
 .story-content > p > a {
     color: var(--yellow);
-}
-.story-content > p > a:visited {
+} */
+/* .story-content > p > a:visited {
     color: var(--yellow);
-}
+} */
 .stories {
     display: flex;
     flex-direction: column;
+}
+.stories a {
+    color: #042779;
+    background-color: white;
 }
 .story > img {
     height: auto;
@@ -693,6 +740,10 @@ a.opciones  {
     font-size: 15px;
     transition: 0.4s;
     overflow: hidden;
+}
+.value a {
+    color: white;
+    background-color: #042779;
 }
 .tab-label {
       display: flex;
