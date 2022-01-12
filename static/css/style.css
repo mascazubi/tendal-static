@@ -500,14 +500,38 @@ a.opciones  {
 }
 .offer {
     background-color: #eef4fd;
-    color: rgb(73, 73, 73);
-    padding-bottom: 3em;
+    padding-bottom: 0;
+    color: white;
 }
-.offer > h1,
+.offer-img {
+    background-image: url(/static/img/offerta-img.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.offer-img::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #163a6c9e;
+}
+.offer-content {
+    position: relative;
+    padding: 1em 0;
+}
+.offer-content > h1 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
 .pedidos > h1 {
     padding: 2em 0 0.8em 0;
 }
-.offer > p {
+.offer-content > p {
     width: 80vw;
     margin-left: auto;
     margin-right: auto;
@@ -660,7 +684,7 @@ a.opciones  {
     background-color: white;
     color: black;
 }
-.qualities-layout a {
+.qualities-style a {
     color: white;
     background-color: rgb(70, 70, 70);
 }
