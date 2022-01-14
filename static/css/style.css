@@ -10,6 +10,11 @@ html {
     --yellow: #ffb81c;
     --brown: #782f40;
     --dark-brown: #4f1e2a;
+    /* logo */
+    --logo-color: black;
+    /* hero */
+    --hero-background-color: #ffd42a;
+    --hero-content-color: rgb(55, 55, 55);
     /* product colors */
     --mango: #ff912a;
     --manzana: rgb(214, 0, 0);  
@@ -82,6 +87,17 @@ section a:hover {
 }
 .logo {
     height: 10em;
+    mask-position: 0px bottom;
+    -webkit-mask-position: 0px bottom;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    background-color: var(--logo-color);
+    width: 10em;
+    margin-bottom: 10px;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url(/static/img/tendal-logo-flat.svg);
+    -webkit-mask-image: url(/static/img/tendal-logo-flat.svg);
 }
 .tendal-inline {
     font-weight: bold;
@@ -138,10 +154,9 @@ main {
     scroll-behavior: smooth;
 }
 .hero {
-    /* height: 400px; */
     background-size: cover;
     background-position: center;
-    background-color: #ffd42a;
+    background-color: var(--hero-background-color);
     margin-bottom: 1em;
     margin-top: 0;
     position: relative;
@@ -152,13 +167,17 @@ main {
     content: '';
     position: absolute;
     width: 100%;
-    height: 28px;
-    background-image: url(/static/img/triangle.png);
-    background-position: center;
-    background-size: 50px 20px;
-    background-repeat: repeat-x;
-    bottom: -21px;
-    filter: invert(95%) sepia(35%) saturate(4490%) hue-rotate(326deg) brightness(97%) contrast(109%);
+    height: 23px;
+    mask-image: url(/static/img/triangle.png);
+    -webkit-mask-image: url(/static/img/triangle.png);
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: 50px 20px;
+    -webkit-mask-size: 50px 20px;
+    mask-repeat: repeat-x;
+    -webkit-mask-repeat: repeat-x;
+    bottom: -20px;
+    background-color: var(--hero-background-color);
 }
 .hero img {
     width: 90vw;
@@ -180,7 +199,7 @@ main {
 .hero h2 {
     font-size: 2.5em;
     font-weight: 700;
-    color: rgb(55, 55, 55);
+    color: var(--hero-content-color);
     text-transform: uppercase;
     margin-bottom: 4px;
 }
@@ -212,11 +231,36 @@ main {
     text-align: center;
     font-weight: normal;
 }
-.feature > img {
+.feature-icon {
+    mask-position: 0px bottom;
+    -webkit-mask-position: 0px bottom;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    background-color: var(--hero-content-color);
     width: 45px;
     height: 45px;
     margin-bottom: 10px;
+    padding-top: 30px;
+    display: flex;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
 }
+.feature-natural {
+    mask-image: url(/static/img/leaf.svg);
+    -webkit-mask-image: url(/static/img/leaf.svg);
+}
+.feature-sugar {
+    mask-image: url(/static/img/no-azucar.svg);
+    -webkit-mask-image: url(/static/img/no-azucar.svg);
+}
+.feature-chem {
+    mask-image: url(/static/img/no-chem.svg);
+    -webkit-mask-image: url(/static/img/no-chem.svg);
+}
+
 .feature  p {
     font-family: var(--rubik);
     font-size: 1em;
@@ -576,13 +620,17 @@ a.opciones  {
     content: '';
     position: absolute;
     width: 100%;
-    height: 28px;
-    background-image: url(/static/img/triangle.png);
-    background-position: center;
-    background-size: 50px 20px;
-    background-repeat: repeat-x;
-    bottom: -21px;
-    filter: invert(96%) sepia(100%) saturate(0%) hue-rotate(207deg) brightness(101%) contrast(104%);
+    height: 23px;
+    mask-image: url(/static/img/triangle.png);
+    -webkit-mask-image: url(/static/img/triangle.png);
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: 50px 20px;
+    -webkit-mask-size: 50px 20px;
+    mask-repeat: repeat-x;
+    -webkit-mask-repeat: repeat-x;
+    bottom: -20px;
+    background-color: white;
 }
 .pedidos > a > div {
     background-color: #e9f9e9ff;
@@ -698,21 +746,8 @@ a.opciones  {
     background-color: white;
     color: black;
 }
-/* .qualities-style::after {
-    content: '';
-    position: absolute;
-    height: 100px;
-    bottom: -16px;
-    left: 0;
-    right: 0;
-    background-image: url('/static/img/sol-tendal.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    z-index: -1;
-} */
 .us-style {
-    background-color: var(--blue-alt);
+    background-color: var(--blue);
     color: white;
     padding-bottom: 1em;
 }
@@ -747,20 +782,24 @@ a.opciones  {
     padding-top: 3em;
     padding-bottom: 5em;
     background-color: white;
-    color: #042779;
+    color: var(--blue);
     position: relative;
 }
 .values::after {
     content: '';
     position: absolute;
     width: 100%;
-    height: 28px;
-    background-image: url(/static/img/triangle.png);
-    background-position: center;
-    background-size: 50px 20px;
-    background-repeat: repeat-x;
-    bottom: -21px;
-    filter: invert(96%) sepia(100%) saturate(0%) hue-rotate(207deg) brightness(101%) contrast(104%);
+    height: 23px;
+    mask-image: url(/static/img/triangle.png);
+    -webkit-mask-image: url(/static/img/triangle.png);
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: 50px 20px;
+    -webkit-mask-size: 50px 20px;
+    mask-repeat: repeat-x;
+    -webkit-mask-repeat: repeat-x;
+    bottom: -20px;
+    background-color: white;
 }
 .value {
     cursor: pointer;
@@ -782,7 +821,7 @@ a.opciones  {
       align-items: center;
       font-weight: bold;
       cursor: pointer;
-      border-bottom: 1px solid #04277921;
+      border-bottom: 1px solid #1f38725c;
 }
 .tab-label > h2 {
     margin-bottom: 0;
@@ -878,6 +917,9 @@ input.accordion:checked ~ .tab-content {
 }
 .info-item:last-of-type p {
     background-color: transparent;
+}
+.info-item:last-of-type p:hover {
+    border: 1px solid transparent;
 }
 .info-item a {
     text-decoration: none;
