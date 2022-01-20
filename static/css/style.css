@@ -116,7 +116,7 @@ nav {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     z-index: 2;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.07);
 }
 nav > ul {
     display: flex;
@@ -970,7 +970,7 @@ input.accordion:checked ~ .tab-content {
 .info-item p {
     margin-top: -0.8em;
     background-color: #0000000d;
-    padding: 1em;
+    padding: 0.8em 1.2em;
     width: max-content;
     border-radius: 8px;
     border: 1px solid transparent;
@@ -998,7 +998,7 @@ footer {
 footer div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 footer p,
 footer a > span {
@@ -1017,8 +1017,10 @@ footer a {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 20px;
-    width: 20px;
+    height: 24px;
+    width: 24px;
+    margin-right: 0.5em;
+    vertical-align: text-bottom;
 }
 .form-map {
     margin-bottom: 3em;
@@ -1070,12 +1072,12 @@ footer a {
     .products-layout {
         flex-direction: row;
         flex-wrap: wrap;
-        max-width: 900px;
+        max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
     }
     .product {
-        max-width: 19em;
+        max-width: 20em;
     }
 }
 @media (min-width: 800px) {
@@ -1160,14 +1162,14 @@ footer a {
         flex-direction: row;
         align-items: flex-start;
         flex-wrap: wrap;
-        max-width: 1024px;
+        max-width: 1525px;
         margin-left: auto;
         margin-right: auto;
         justify-content: center;
     }
     .service, .quality {
         margin-bottom: 4em;
-        max-width: 385px;
+        max-width: 35%;
     }
     .stories {
         margin-left: auto;
@@ -1195,16 +1197,15 @@ footer a {
     .info {
         flex-direction: row;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: space-around;
         margin-left: auto;
         margin-right: auto;
         flex-wrap: wrap;
-        max-width: 1000px;
+        max-width: 1320px;
     }
     .info-item {
         margin-left: 1em;
         margin-right: 1em;
-        width: 33%;
     }
     .map {
         height: 450px;
@@ -1221,6 +1222,10 @@ footer a {
 
 /* Larger than tablet */
 @media(min-width: 1200px) {
+    
+    .quality {
+        max-width: 23%;
+    }
     .us-style {
         background-color: transparent;
         position: relative;
@@ -1254,7 +1259,7 @@ footer a {
       .stories {
         margin-left: auto;
         margin-right: auto;
-        max-width: 1100px;
+        max-width: 1320px;
     }
 }
 @media(min-width: 1980px) {
