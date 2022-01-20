@@ -22,12 +22,18 @@ html {
     --frutilla: rgb(248, 100, 100);
     --pina: #ffb81c;
     --papaya: rgb(255, 115, 0);
+    --banano:rgb(255, 203, 0);
+    --mandarina: rgb(255, 94, 0);
+
     --mango-light: rgb(255, 171, 42, 0.2);
     --manzana-light: rgba(192, 45, 45, 0.2);  
     --pitahaya-light: rgb(221, 199, 0, 0.2);
     --frutilla-light: rgb(255, 71, 71, 0.2);
     --pina-light: rgb(255, 184, 28, 0.2);
     --papaya-light: rgb(255, 115, 0, 0.2);
+    --banano-light: rgb(255, 203, 0, 0.2);
+    --mandarina-light: rgb(255, 94, 0, 0.2);
+
     /* prod images */
     --prod-img-size: 250px;
     --prod-shadow-size: -20px -10px 0;
@@ -334,6 +340,9 @@ img.product-img {
   0px 35px 50px -29px rgba(0, 0, 0, 0.24)
 ;
 }
+
+/* INDIVIDAUL PRODUCT CSS (each needs colors defined above)*/
+
 .mango > .product-content > h2 {
     color: var(--mango);
 }
@@ -352,74 +361,13 @@ img.product-img {
 .pitahaya > .product-content > h2 {
     color: var(--pitahaya);
 }
-.product-content > p {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1em;
+.banano > .product-content > h2 {
+    color: var(--banano);
 }
-a.opciones  {
-    text-decoration: none;
-    margin-right: auto;
-    height: max-content;
-    padding: .6em 1.5em;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 30px;
-    letter-spacing: .08rem;
-    text-transform: unset;
-    border-radius: 8px;
-    border: none;
-    background-image: none;
-    border: 1px solid transparent;
-    transition: border-color var(--duration);
+.mandarina > .product-content > h2 {
+    color: var(--mandarina);
 }
-[id^=modal] {
-    display: none;
-    position: fixed;
-    top:0;
-    left:0;
-    right: 0;
-    bottom: 0;
-    justify-content: center;
-    align-items: center;
-}
-.modal-close {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-.items {
-    display: flex;
-    width: 69vw;
-    max-width: 420px;
-    border-radius: 2em;
-    padding: 0.8em;
-    flex-direction: column;
-    justify-content: space-between;
-    -webkit-animation: scale-up-center 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000);
-    animation: scale-up-center 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000);
-}
-.op-items {
-    margin-top: -25px;
-    display: flex;
-    flex-direction: column;
-
-}
-#modalManzana:target,
-#modalFrutilla:target,
-#modalPina:target,
-#modalMango:target,
-#modalPapaya:target,
-#modalPitahaya:target,
-.scale-up-center
- {
-    display: flex;
-    z-index: 3;
-}
-.op {
-    color: white;
-}
- .op-manzana {
+.op-manzana {
     background-color: var(--manzana);
     box-shadow:
     0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
@@ -480,6 +428,154 @@ a.opciones  {
     0px 41.8px 33.4px var(--pitahaya-light),
     0px 100px 80px rgba(0, 0, 0, 0.07);
  }
+.op-banano {
+    background-color: var(--banano);
+    box-shadow:
+    0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    0px 12.5px 10px var(--banano-light),
+    0px 22.3px 17.9px var(--banano-light),
+    0px 41.8px 33.4px var(--banano-light),
+    0px 100px 80px rgba(0, 0, 0, 0.07);
+}
+.op-mandarina {
+    background-color: var(--mandarina);
+    box-shadow:
+    0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    0px 12.5px 10px var(--mandarina-light),
+    0px 22.3px 17.9px var(--mandarina-light),
+    0px 41.8px 33.4px var(--mandarina-light),
+    0px 100px 80px rgba(0, 0, 0, 0.07);
+}
+.mango > .product-content > a.opciones {
+    color: #e88c00;
+    background-color: var(--mango-light);
+}
+.mango > .product-content > a.opciones:hover {
+    border-color: #e88c00;
+}
+.frutilla > .product-content > a.opciones {
+    color: var(--frutilla);
+    background-color: var(--frutilla-light);
+}
+.frutilla > .product-content > a.opciones:hover {
+    border-color: var(--frutilla);
+}
+.pina > .product-content > a.opciones {
+    color: #d08f00;
+    background-color: var(--pina-light);
+}
+.pina > .product-content > a.opciones:hover {
+    border-color: #d08f00;
+}
+.manzana > .product-content > a.opciones {
+    color: var(--manzana);
+    background-color: var(--manzana-light);
+}
+.manzana > .product-content > a.opciones:hover {
+    border-color: var(--manzana);
+}
+.papaya > .product-content > a.opciones {
+    color: var(--papaya);
+    background-color: var(--papaya-light);
+}
+.papaya > .product-content > a.opciones:hover {
+    border-color: var(--papaya);
+}
+.pitahaya > .product-content > a.opciones {
+    color: rgb(176, 159, 0);
+    background-color: var(--pitahaya-light);
+}
+.pitahaya > .product-content > a.opciones:hover {
+    border-color: rgb(176, 159, 0);
+}
+.banano > .product-content > a.opciones {
+    color: rgb(151, 127, 34);
+    background-color: var(--banano-light);
+}
+.banano > .product-content > a.opciones:hover {
+    border-color: var(--banano);
+}
+.mandarina > .product-content > a.opciones {
+    color: var(--mandarina);
+    background-color: var(--mandarina-light);
+}
+.mandarina > .product-content > a.opciones:hover {
+    border-color: var(--mandarina);
+}
+ 
+/* END OF INDIVIDUAL PRODUCT CSS */
+
+.product-content > p {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+a.opciones  {
+    text-decoration: none;
+    margin-right: auto;
+    height: max-content;
+    padding: .6em 1.5em;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 30px;
+    letter-spacing: .08rem;
+    text-transform: unset;
+    border-radius: 8px;
+    border: none;
+    background-image: none;
+    border: 1px solid transparent;
+    transition: border-color var(--duration);
+}
+[id^=modal] {
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
+.modal-close {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.items {
+    display: flex;
+    width: 69vw;
+    max-width: 420px;
+    border-radius: 2em;
+    padding: 0.8em;
+    flex-direction: column;
+    justify-content: space-between;
+    -webkit-animation: scale-up-center 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    animation: scale-up-center 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+}
+.op-items {
+    margin-top: -25px;
+    display: flex;
+    flex-direction: column;
+
+}
+#modalManzana:target,
+#modalFrutilla:target,
+#modalPina:target,
+#modalMango:target,
+#modalPapaya:target,
+#modalPitahaya:target,
+#modalBanano:target,
+#modalMandarina:target,
+.scale-up-center
+ {
+    display: flex;
+    z-index: 3;
+}
+.op {
+    color: white;
+}
 .op-item {
     display: flex;
     flex-direction: column;
@@ -560,49 +656,6 @@ a.opciones  {
               transform: scale(1);
     }
   }
-  
-.mango > .product-content > a.opciones {
-    color: #e88c00;
-    background-color: var(--mango-light);
-}
-.mango > .product-content > a.opciones:hover {
-    border-color: #e88c00;
-}
-.frutilla > .product-content > a.opciones {
-    color: var(--frutilla);
-    background-color: var(--frutilla-light);
-}
-.frutilla > .product-content > a.opciones:hover {
-    border-color: var(--frutilla);
-}
-.pina > .product-content > a.opciones {
-    color: #d08f00;
-    background-color: var(--pina-light);
-}
-.pina > .product-content > a.opciones:hover {
-    border-color: #d08f00;
-}
-.manzana > .product-content > a.opciones {
-    color: var(--manzana);
-    background-color: var(--manzana-light);
-}
-.manzana > .product-content > a.opciones:hover {
-    border-color: var(--manzana);
-}
-.papaya > .product-content > a.opciones {
-    color: var(--papaya);
-    background-color: var(--papaya-light);
-}
-.papaya > .product-content > a.opciones:hover {
-    border-color: var(--papaya);
-}
-.pitahaya > .product-content > a.opciones {
-    color: rgb(176, 159, 0);
-    background-color: var(--pitahaya-light);
-}
-.pitahaya > .product-content > a.opciones:hover {
-    border-color: rgb(176, 159, 0);
-}
 .b-pad {
     padding-left: 2.5em;
     padding-right: 2.5em;
@@ -764,7 +817,7 @@ a.opciones  {
 {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 .product,
 .service,
@@ -1211,7 +1264,7 @@ footer a {
         height: 450px;
     }
     .form-map {
-        margin-bottom: 4em;
+        margin-bottom: 5em;
     }
     .footer-wrap {
         max-width: 1000px;
