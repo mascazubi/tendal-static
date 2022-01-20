@@ -1247,6 +1247,9 @@ footer a {
     .story:nth-of-type(even) {
         flex-flow: row-reverse;
     }
+    .contact {
+        padding-bottom: 3em;
+    }
     .info {
         flex-direction: row;
         align-items: flex-start;
