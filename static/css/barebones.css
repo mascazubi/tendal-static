@@ -61,13 +61,7 @@ html {
   --code-background: hsl(var(--theme-hue), 0%, 95%);			/* #f1f1f1 		code background*/
 
 	--button-primary-color: white;
-  
-  --green: #1d8263;
-  --blue: #1f3872;
-  --dark-blue: #172953;
-  --yellow: #ffb81c;
-  --brown: #782f40;
-  --dark-brown: #4f1e2a;
+
 
 	/* Note: Skeleton was based off a 10px font sizing for REM  */
 	/* 62.5% of typical 16px browser default = 10px */
@@ -190,7 +184,6 @@ body {
   font-size: 1.6rem;		/* changed from 15px in orig skeleton */
   line-height: 1.6;
   font-weight: 400;
-  font-family: 'Rubik', Helvetica, Arial, sans-serif;
   color: var(--text-color-normal); 
   background-color: var(--background-color);;
 }
@@ -221,7 +214,6 @@ h6 { font-size: 1.2rem; line-height: 1.6;  letter-spacing: 0; }
 
 p {
   margin-top: 0;
-  font-family: 'Open Sans' , sans-serif;
   font-size: clamp(1.6rem, 1.5vw, 1.7rem);
   max-width: 75ch;
 }
