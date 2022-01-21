@@ -1151,6 +1151,7 @@ footer a {
 @media(min-width: 900px) {
 
     .hero {
+        padding-top: 2em;
         padding-bottom: 4em;
     }
     .hero-content {
