@@ -90,6 +90,14 @@ section a {
 section a:hover {
     text-decoration-thickness: 3px;
 }
+.language {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+.language-link {
+    color: #333;
+}
 .logo-container {
     margin: 1.8em auto 1.5em
 }
@@ -1307,7 +1315,7 @@ footer a {
         max-width: 1000px;
     }
     .story > img {
-        width: 480px;
+        width: 525px;
     }
 }
 @media(min-width: 1380px) {
