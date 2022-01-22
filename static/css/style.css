@@ -189,8 +189,8 @@ main {
     position: absolute;
     width: 100%;
     height: 23px;
-    mask-image: url(/static/img/triangle.png);
-    -webkit-mask-image: url(/static/img/triangle.png);
+    mask-image: url(/static/img/triangle.png.webp);
+    -webkit-mask-image: url(/static/img/triangle.png.webp);
     mask-position: center;
     -webkit-mask-position: center;
     mask-size: 50px 20px;
@@ -212,9 +212,7 @@ main {
     padding-top:3em;
     display: flex;
     align-self: center;
-    /* margin-left: auto;
-    margin-right: auto; */
-    max-width: 720px;
+    max-width: 560px;
 }
 .hero-content h2,
 .hero-desc > p {
@@ -666,7 +664,7 @@ a.opciones  {
     color: white;
 }
 .offer-img {
-    background-image: url(/static/img/offerta-img.jpg);
+    background-image: url(/static/img/offerta-img.jpg.webp);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -723,8 +721,8 @@ a.opciones  {
     position: absolute;
     width: 100%;
     height: 23px;
-    mask-image: url(/static/img/triangle.png);
-    -webkit-mask-image: url(/static/img/triangle.png);
+    mask-image: url(/static/img/triangle.png.webp);
+    -webkit-mask-image: url(/static/img/triangle.png.webp);
     mask-position: center;
     -webkit-mask-position: center;
     mask-size: 50px 20px;
@@ -907,8 +905,8 @@ a.opciones  {
     position: absolute;
     width: 100%;
     height: 23px;
-    mask-image: url(/static/img/triangle.png);
-    -webkit-mask-image: url(/static/img/triangle.png);
+    mask-image: url(/static/img/triangle.png.webp);
+    -webkit-mask-image: url(/static/img/triangle.png.webp);
     mask-position: center;
     -webkit-mask-position: center;
     mask-size: 50px 20px;
@@ -1125,7 +1123,7 @@ footer a {
     .products-layout {
         flex-direction: row;
         flex-wrap: wrap;
-        max-width: 1000px;
+        max-width: 900px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -1150,30 +1148,6 @@ footer a {
 /* Larger than phablet */
 @media(min-width: 900px) {
 
-    .hero {
-        padding-top: 2em;
-        padding-bottom: 4em;
-    }
-    .hero-content {
-        flex-direction: row-reverse;
-        align-items: center;
-        max-width: 950px;
-    }
-    .hero-content img {
-        max-width: 560px;
-    }
-    .hero-desc > h2,
-    .hero-desc > p {
-        text-align: left;
-    }
-    .hero-desc > p  {
-        max-width: 40ch;
-    }
-    .features-layout {
-        padding-top: 0;
-        max-width: 290px;
-        margin-left: 0;
-    }
     .items {
         max-width: 700px;
     }
@@ -1276,6 +1250,34 @@ footer a {
         margin-right: auto;
     }
 }
+@media(min-width: 1000px) {
+    
+    .hero {
+        padding-top: 2em;
+        padding-bottom: 4em;
+    }
+    .hero-content {
+        flex-direction: row-reverse;
+        align-items: center;
+        max-width: 950px;
+    }
+    .hero-desc > h2,
+    .hero-desc > p {
+        text-align: left;
+    }
+    .hero-desc > p  {
+        max-width: 40ch;
+    }
+    .products-layout {
+        max-width: 950px;
+    }
+    .features-layout {
+        padding-top: 0;
+        max-width: 290px;
+        margin-left: 0;
+    }
+
+}   
 
 /* Larger than tablet */
 @media(min-width: 1200px) {
@@ -1317,6 +1319,9 @@ footer a {
         margin-left: auto;
         margin-right: auto;
         max-width: 1320px;
+    }
+    .products-layout {
+        max-width: 1000px;
     }
 }
 @media(min-width: 1980px) {
