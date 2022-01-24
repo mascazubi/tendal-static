@@ -227,7 +227,7 @@ main {
     font-weight: 700;
     color: var(--hero-content-color);
     text-transform: uppercase;
-    margin-bottom: 4px;
+    margin-bottom: 0;
 }
 .hero-desc > p  {
     font-size: 1.3em;
@@ -242,7 +242,6 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-top: 1em;
     max-width: 320px;
     margin-right: auto;
     margin-left: auto;
@@ -1041,10 +1040,8 @@ input.accordion:checked ~ .tab-content {
     font-weight: normal;
 }
 footer {
-    border-top: 1px solid rgb(59, 59, 59);
-    padding: 1em 0;
-    background-color: #1a1a1a;
-    color: white;
+    padding: 2em 0;
+    background-color: #f2efe9;
 }
 footer div {
     display: flex;
@@ -1056,7 +1053,7 @@ footer a > span {
     font-family: var(--heading-font);
     font-size: 1.3rem;
     margin-bottom: 0;
-    color: #f2efe9;
+    color: #353534;
 }
 footer a {
     line-height: 1;

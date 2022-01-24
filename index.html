@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TENDAL - Granja Solar</title>
-    <meta name="description" content="Somos ecuatorianos innovadores en el uso de energía solar térmica para deshidratar y secar alimentos.">
+    <title>Alimentos deshidratados con energía solar térmica - TENDAL</title>
+    <meta name="description" content="Alimentos naturales deshidratados con energía solar térmica. Ofrecemos deshidratar o secar cualquier hortofrutícola de su interés.">
     <!-- social -->
-    <meta property="og:title" content="TENDAL - Granja Solar">
+    <meta property="og:title" content="Alimentos deshidratados con energía solar térmica - TENDAL Granja Solar">
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://tendal.ec/static/img/og-tendal-hero.jpg">
     <meta property="og:url" content="https://tendal.ec">
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:description" content="Somos ecuatorianos innovadores en el uso de energía solar térmica para deshidratar y secar alimentos.">
-    <meta property="og:site_name" content="TENDAL - Granja Solar">
-    <meta name="twitter:image:alt" content="Mezcla de productos secos como mango, banano, mandarina, papaya, piña, frutilla y pitahaya.">
+    <meta property="og:description" content="Alimentos naturales deshidratados con energía solar térmica. Ofrecemos deshidratar o secar cualquier hortofrutícola de su interés.">
+    <meta property="og:site_name" content="TENDAL - Alimentos deshidratados con energía solar térmica">
+    <meta name="twitter:image:alt" content="Fruta deshidratada con energía solar térmica, 100% natural, sin azucar o additivos añadidos.">
     <!-- styles -->
     <link rel="stylesheet" href="static/css/normalize.css">
     <link rel="stylesheet" href="static/css/barebones.css">
@@ -34,7 +34,7 @@
                 <!-- logo -->
                 <div class="logo-container">
                     <a href="./">
-                        <div class="logo" src="/static/img/tendal-logo-flat.svg" alt="Tendal - granja solar logo"></div>
+                        <div class="logo"></div>
                     </a>
                 </div>
             </header>
@@ -80,7 +80,7 @@
                 <!-- content sections -->
                 <!-- prouctos -->
                 <a name="productos"></a>
-                <section class="products-style">
+                <section id="productos-deshidratados" class="products-style">
                     <h1>Productos</h1>
                     <div class="products-layout">
                         <div class="product manzana">
@@ -308,7 +308,7 @@
                 </section>
                 <!-- offerta -->
                 <a name="offerta"></a>
-                <section class="offer">
+                <section id="offerta" class="offer">
                     <div class="offer-img">
                         <div class="offer-layout">
                             <div class="offer-content">
@@ -320,7 +320,7 @@
                 </section>
                 <!-- pedidos -->
                 <a name="pedidos"></a>
-                <section class="pedidos">
+                <section id="pedidos" class="pedidos">
                     <h1>Info y Pedidos</h1>
                     <a href="tel:+593-099-988-2216">
                         <div>
@@ -333,7 +333,7 @@
                 </section>
                 <!-- servicios -->
                 <a name="servicios"></a>
-                <section class="services-style">
+                <section id="servicios" class="services-style">
                     <h1>Servicios</h1>
                     <div class="services-layout">
                         <div class="service b-pad">
@@ -360,7 +360,7 @@
                 </section>
                 <!-- calidad -->
                 <a name="calidad"></a>
-                <section class="qualities-style">
+                <section id="calidad-de-producto" class="qualities-style">
                     <h1>Calidad</h1>
                     <p class="b-pad">
                         Todos nuestros productos provienen y se procesan conforme el Código Alimentario de la <a rel="no-follow noopener"  href="https://www.fao.org/fao-who-codexalimentarius/about-codex/es/">FAO/OMS</a>, Código de Practicas de Higiene europeo para Frutos Secos CAC/RCP 3-1969 y normativa nacional de la <a rel="no-follow noopener"  href="https://www.controlsanitario.gob.ec/">ARCSA</a>.
@@ -391,7 +391,7 @@
                 </section>
                 <!-- nosotros -->
                 <a name="nosotros"></a>
-                <section class="us-style">
+                <section id="nosotros" class="us-style">
                     <h1>Nosotros</h1>
                         <div class="stories">
                             <div class="story">
@@ -414,7 +414,7 @@
                             </div>
                         </div>
                 </section>
-                <section class="values">
+                <section id="mission-vision" class="values">
                     <div class="values-layout">
                         <div class="value b-pad">
                             <input type="radio" id="rd1" name="rd" class="accordion">
@@ -451,27 +451,8 @@
                 </section>
                 <a name="contacto"></a>
                 <!-- contacto -->
-                <section class="contact">
+                <section id="contacto" class="contact">
                     <div class="form-map">
-                        <!-- <div class="contact-form-container b-pad">
-                            <h2>¡Envianos un mensaje!</h2>
-                            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mbjqbbry" method="post" class="form">
-                                <fieldset id="fs-frm-inputs">
-                                    <input type="hidden" name="_language" value="es" />
-                                    <input type ="hidden" name="subject" value="Contacto - TENDAL" />
-                                    <div class="name-email">
-                                        <label for="full-name">Nombre</label>
-                                        <input type="text" name="name" id="full-name" placeholder="" required="">
-                                        <label for="email-address">Email</label>
-                                        <input type="email" name="_replyto" id="email-address" placeholder="" required="yes">
-                                    </div>
-                                    <label for="message">Mensaje</label>
-                                    <textarea rows="5" name="message" id="message" placeholder="" required=""></textarea>
-                                    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-                                </fieldset>
-                                <input type="submit" value="Mandar">
-                              </form>
-                        </div> -->
                         <div class="map">
                             <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-78.06532859802248%2C0.4677720556660203%2C-78.04706811904909%2C0.48004542424839575&amp;layer=mapnik&amp;marker=0.47390874267551364%2C-78.05619835853577"></iframe>
                         </div>
