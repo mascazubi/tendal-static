@@ -696,7 +696,7 @@ a.opciones  {
     padding-bottom: 1em;
 }
 .pedidos > h1 {
-    padding: 1em 0 0.8em 0;
+    padding: 1em 0 1.5em 0;
 }
 .offer-content > p {
     width: 80vw;
@@ -711,7 +711,7 @@ a.opciones  {
     padding-bottom: 6em;
     padding-top: 3em;
 }
-.pedidos a {
+.pedido-items a {
     color: var(--pedidos-content-color);
     text-decoration: none;
 }
@@ -731,7 +731,7 @@ a.opciones  {
     bottom: -20px;
     background-color: white;
 }
-.pedidos > a > div {
+.number-block {
     background-color: #e9f9e9ff;
     width: 80vw;
     margin-left: auto;
@@ -742,10 +742,10 @@ a.opciones  {
     transition: border-color var(--duration);
     max-width: 33em;
 }
-.pedidos a:hover > div {
+.pedido-items a:hover > div {
     border:1px solid #aed7ae;
 }
-.pedidos > a > div > p {
+.pedido-items  a  div  p {
     margin: .1em 0;
     text-align: center;
 }
@@ -765,19 +765,19 @@ a.opciones  {
 }
 .number > span {
     display: inline-block;
-    mask-image: url(/static/img/phone.svg);
+    mask-image: url(/static/img/store.svg);
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: contain;
-    -webkit-mask-image: url(/static/img/phone.svg);
+    -webkit-mask-image: url(/static/img/store.svg);
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     margin-top: -3px;
     background-color: var(--pedidos-content-color);
-    margin-right: 11px;
+    margin-right: 14px;
 }
 .services-style {
     background-color: var(--mango);
@@ -1067,7 +1067,6 @@ footer a {
     background-size: contain;
     height: 24px;
     width: 24px;
-    margin-right: 0.5em;
     vertical-align: text-bottom;
 }
 .form-map {
@@ -1087,8 +1086,8 @@ footer a {
         font-size: 5rem;       
     }
     .number > span {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         margin-top: -5px;
     }
     .product {
