@@ -1180,7 +1180,7 @@ footer a {
     }
     .offer-content > h1 {
         text-align: left;
-        padding-bottom: 0.5em;
+        padding-bottom: 0.2em;
     }
     .services-layout, .qualities-layout {
         flex-direction: row;
@@ -1289,13 +1289,13 @@ footer a {
         background-color: var(--blue);
         position: absolute;
         content: '';
-        inset: 204px 0 110px 0;
+        inset: 204px 0 134px 0;
         z-index: -1;
-    }
+      }
     .us-style > h1 {
         color: var(--blue);
         padding-top: 1em;
-        padding-bottom: 2em;
+        padding-bottom: 1.5em;
     }
     .stories {
         margin-left: auto;
@@ -1304,6 +1304,9 @@ footer a {
     }
     .story > img {
         width: 480px;
+    }
+    .values {
+        padding-top: 1em;
     }
 }
 @media(min-width: 1380px) {
