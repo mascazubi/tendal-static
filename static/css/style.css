@@ -108,6 +108,7 @@ section a:hover {
     -webkit-mask-repeat: no-repeat;
     mask-image: url(/static/img/tendal-logo-flat.svg);
     -webkit-mask-image: url(/static/img/tendal-logo-flat.svg);
+    color: var(--logo-color);
 }
 .tendal-inline {
     font-weight: bold;
