@@ -38,7 +38,9 @@ html {
     --prod-img-size: 250px;
     --prod-shadow-size: -20px -10px 0;
     /* pedidos */
-    --pedidos-content-color: #37c837;
+    --pedidos-content-color: #33b333;
+    /* servicios */
+    --servicios-bg: #ee831f;
     /* nosotros */
     --blue-alt: #042779;
     --dark-blue-alt: #021e60;
@@ -695,14 +697,14 @@ a.opciones  {
     padding-top: 1em;
     padding-bottom: 1em;
 }
-.pedidos > h1 {
-    padding: 1em 0 1.5em 0;
-}
 .offer-content > p {
     width: 80vw;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+.pedidos > h1 {
+    padding: 1em 0 1.5em 0;
 }
 .pedidos {
     color: var(--pedidos-content-color);
@@ -780,12 +782,11 @@ a.opciones  {
     margin-right: 14px;
 }
 .services-style {
-    background-color: var(--mango);
+    background-color: var(--servicios-bg);
     color: #ffffff;
     background-image: url(/static/img/frutas-line.svg);
-    background-position: bottom right;
+    background-position: bottom 1em right 1em;
     background-repeat: no-repeat;
-    background-size: 80%;
     background-size: auto;
     background-blend-mode: color-burn;
 }
@@ -1068,6 +1069,7 @@ footer a {
     height: 24px;
     width: 24px;
     vertical-align: text-bottom;
+    margin-right: 10px;
 }
 .form-map {
     margin-bottom: 3em;
