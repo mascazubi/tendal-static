@@ -40,7 +40,7 @@ html {
     /* pedidos */
     --pedidos-content-color: #33b333;
     /* servicios */
-    --servicios-bg: #ee831f;
+    --servicios-bg: #dd7514;
     /* nosotros */
     --blue-alt: #042779;
     --dark-blue-alt: #021e60;
@@ -785,11 +785,6 @@ a.opciones  {
 .services-style {
     background-color: var(--servicios-bg);
     color: #ffffff;
-    background-image: url(/static/img/frutas-line.svg);
-    background-position: bottom 1em right 1em;
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-blend-mode: color-burn;
 }
 .services-style > h1,
 .qualities-style > h1 {
@@ -864,15 +859,6 @@ a.opciones  {
     color: white;
     padding-bottom: 1em;
 }
-/* .story-content > p > a {
-    color: white;
-}
-.story-content > p > a {
-    color: var(--yellow);
-} */
-/* .story-content > p > a:visited {
-    color: var(--yellow);
-} */
 .stories {
     display: flex;
     flex-direction: column;
@@ -888,6 +874,9 @@ a.opciones  {
   0px 7.4px 27.7px -29px rgba(0, 0, 0, 0.112),
   0px 14.1px 45.4px -29px rgba(0, 0, 0, 0.13),
   0px 35px 50px -29px rgba(0, 0, 0, 0.24);
+}
+.story-content > p {
+    margin-bottom: 0;
 }
 .values-layout {
     max-width: 840px;
@@ -1292,7 +1281,7 @@ footer a {
         background-color: var(--blue);
         position: absolute;
         content: '';
-        inset: 204px 0 134px 0;
+        inset: 200px 0 130px 0;
         z-index: -1;
       }
     .us-style > h1 {
@@ -1303,7 +1292,7 @@ footer a {
     .stories {
         margin-left: auto;
         margin-right: auto;
-        max-width: 1000px;
+        max-width: 1130px;
     }
     .story > img {
         width: 480px;
