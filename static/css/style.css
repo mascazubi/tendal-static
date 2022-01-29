@@ -122,8 +122,8 @@ nav {
     display: flex;
     align-items: center;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255);
+    /* backdrop-filter: blur(10px); */
     z-index: 2;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.07);
 }
@@ -134,8 +134,16 @@ nav > ul {
     margin-top: 1em;
     margin-bottom: 1em;
     overflow-x: scroll;
-    /* scrollbar-width: none; */
+    scrollbar-width: thin;
 }
+/* nav > ul::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #f0f0f0;
+  }
+nav > ul::-webkit-scrollbar-thumb {
+    background: #cdcdcd;
+} */
 nav:after {
     content: '';
     position: absolute;
