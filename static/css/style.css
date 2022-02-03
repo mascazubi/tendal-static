@@ -71,7 +71,7 @@ a {
   white-space: nowrap;
 }
 a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
-    a):not(.logo-container a) {
+    a):not(.logo-container a):not(.op-close) {
   font-weight: inherit;
   cursor: pointer;
   text-decoration: none;
@@ -84,12 +84,12 @@ a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
   padding: 0 1px;
 }
 a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
-    a):not(.logo-container a):hover {
+    a):not(.logo-container a):not(.op-close):hover {
   background-size: 4px 50px;
   color: #00000091;
 }
 a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
-    a):not(.service-extra a):not(.logo-container a):after {
+    a):not(.service-extra a):not(.logo-container a):not(.op-close):after {
   content: "\2197\FE0E";
   font-weight: bold;
 }
