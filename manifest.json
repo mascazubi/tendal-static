@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "TENDAL Granja Solar",
+  "short_name": "TENDAL",
   "icons": [
     {
       "src": "static/img/android-chrome-192x192.png",
@@ -13,7 +13,9 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
+  "start_url": "https://www.tendal.ec",
   "background_color": "#ffffff",
-  "display": "standalone"
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "description": "Alimentos deshidratados con energía solar térmica"
 }
