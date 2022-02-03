@@ -68,6 +68,30 @@ p {
 a {
   text-decoration: none;
   color: inherit;
+  white-space: nowrap;
+}
+a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
+    a):not(.logo-container a) {
+  font-weight: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  background: linear-gradient(to bottom, var(--pina) 0%, var(--pina) 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 10px 3px;
+  transition: all var(--duration) linear;
+  padding: 0 1px;
+}
+a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
+    a):not(.logo-container a):hover {
+  background-size: 4px 50px;
+  color: #00000091;
+}
+a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
+    a):not(.service-extra a):not(.logo-container a):after {
+  content: "\2197\FE0E";
+  font-weight: bold;
 }
 nav a {
   text-decoration: none;
@@ -88,16 +112,6 @@ nav a:focus::before {
   top: -4px;
   bottom: -4px;
   left: -6px;
-}
-section a {
-  font-weight: 600;
-  text-decoration: underline;
-  color: inherit;
-  text-decoration-thickness: 2px;
-  transition: text-decoration-thickness var(--duration);
-}
-section a:hover {
-  text-decoration-thickness: 3px;
 }
 .logo-container {
   margin: 1.8em auto 1.5em;
