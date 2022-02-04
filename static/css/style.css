@@ -81,7 +81,6 @@ a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
   background-repeat: repeat-x;
   background-size: 10px 3px;
   transition: all var(--duration) linear;
-  padding: 0 1px;
 }
 a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
     a):not(.logo-container a):not(.op-close):hover {
@@ -1070,7 +1069,7 @@ footer a {
     margin-right: calc((100vw - 440px) / 4);
   }
   .hero h2 {
-    margin-top: 1em;
+    margin-top: 0.5em;
   }
   .number p {
     font-size: 5rem;
