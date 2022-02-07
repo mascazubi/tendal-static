@@ -44,6 +44,8 @@ html {
   /* nosotros */
   --blue-alt: #042779;
   --dark-blue-alt: #021e60;
+  /* footer */
+  --footer-content-color: #353534;
   /* animation duration */
   --duration: 0.3s;
 }
@@ -71,7 +73,7 @@ a {
   white-space: nowrap;
 }
 a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
-    a):not(.logo-container a):not(.op-close) {
+    a):not(.logo-container a):not(.op-close):not(footer a) {
   font-weight: inherit;
   cursor: pointer;
   text-decoration: none;
@@ -89,7 +91,7 @@ a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
   color: #00000091;
 }
 a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
-    a):not(.service-extra a):not(.logo-container a):not(.op-close):after {
+    a):not(.service-extra a):not(.logo-container a):not(.op-close):not(footer a):after {
   content: "\2197\FE0E";
   font-weight: bold;
 }
@@ -1033,8 +1035,9 @@ footer {
   padding: 2em 0;
   background-color: #f2efe9;
 }
-footer div {
+.footer-wrap {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -1043,26 +1046,62 @@ footer a > span {
   font-family: var(--heading-font);
   font-size: 1.3rem;
   margin-bottom: 0;
-  color: #353534;
+  color: var(--footer-content-color);
 }
 footer a {
   line-height: 1;
 }
-.wapp {
-  display: inline-block;
+.wapp, 
+.insta {
   color: inherit;
-  background-image: url(/static/img/wapp-logo.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   height: 24px;
   width: 24px;
   vertical-align: text-bottom;
-  margin-right: 10px;
+}
+.wapp{
+    display: inline-block;
+    background-image: url(/static/img/wapp-logo.svg);
+    margin-right: 10px;
+}
+.insta {
+    background-image: url(/static/img/insta-logo.svg);
+    margin-bottom: 2em;
+    position: relative;
 }
 .form-map {
   margin-bottom: 3em;
 }
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  background-color: var(--footer-content-color);
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  transform:translateX(-50%);
+  transition: var(--duration) opacity;   
+}
+.tooltip:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: 10px solid #000;
+    border-color: var(--footer-content-color) transparent transparent transparent;
+}
+.insta:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
 
 /* Larger than mobile (default point when grid becomes active) */
 @media (min-width: 520px) {
