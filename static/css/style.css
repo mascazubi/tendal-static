@@ -85,12 +85,17 @@ a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
   transition: all var(--duration) linear;
 }
 a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
-    a):not(.logo-container a):not(.op-close):hover {
+    a):not(.logo-container a):not(.op-close):hover,
+a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
+    a):not(.logo-container a):not(.op-close):active,
+a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
+    a):not(.logo-container a):not(.op-close):focus {
   background-size: 4px 50px;
   color: #00000091;
 }
 a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
-    a):not(.service-extra a):not(.logo-container a):not(.op-close):not(footer a):after {
+    a):not(.service-extra a):not(.logo-container a):not(.op-close):not(footer
+    a):after {
   content: "\2197\FE0E";
   font-weight: bold;
 }
@@ -456,56 +461,72 @@ img.product-img {
   color: #e88c00;
   background-color: var(--mango-light);
 }
-.mango > .product-content > a.opciones:hover {
+.mango > .product-content > a.opciones:hover,
+.mango > .product-content > a.opciones:active,
+.mango > .product-content > a.opciones:focus {
   border-color: #e88c00;
 }
 .frutilla > .product-content > a.opciones {
   color: var(--frutilla);
   background-color: var(--frutilla-light);
 }
-.frutilla > .product-content > a.opciones:hover {
+.frutilla > .product-content > a.opciones:hover,
+.frutilla > .product-content > a.opciones:active,
+.frutilla > .product-content > a.opciones:focus {
   border-color: var(--frutilla);
 }
 .pina > .product-content > a.opciones {
   color: #d08f00;
   background-color: var(--pina-light);
 }
-.pina > .product-content > a.opciones:hover {
+.pina > .product-content > a.opciones:hover,
+.pina > .product-content > a.opciones:active,
+.pina > .product-content > a.opciones:focus {
   border-color: #d08f00;
 }
 .manzana > .product-content > a.opciones {
   color: var(--manzana);
   background-color: var(--manzana-light);
 }
-.manzana > .product-content > a.opciones:hover {
+.manzana > .product-content > a.opciones:hover,
+.manzana > .product-content > a.opciones:active,
+.manzana > .product-content > a.opciones:focus {
   border-color: var(--manzana);
 }
 .papaya > .product-content > a.opciones {
   color: var(--papaya);
   background-color: var(--papaya-light);
 }
-.papaya > .product-content > a.opciones:hover {
+.papaya > .product-content > a.opciones:hover,
+.papaya > .product-content > a.opciones:active,
+.papaya > .product-content > a.opciones:focus {
   border-color: var(--papaya);
 }
 .pitahaya > .product-content > a.opciones {
   color: rgb(176, 159, 0);
   background-color: var(--pitahaya-light);
 }
-.pitahaya > .product-content > a.opciones:hover {
+.pitahaya > .product-content > a.opciones:hover,
+.pitahaya > .product-content > a.opciones:active,
+.pitahaya > .product-content > a.opciones:focus {
   border-color: rgb(176, 159, 0);
 }
 .banano > .product-content > a.opciones {
   color: rgb(151, 127, 34);
   background-color: var(--banano-light);
 }
-.banano > .product-content > a.opciones:hover {
+.banano > .product-content > a.opciones:hover,
+.banano > .product-content > a.opciones:active,
+.banano > .product-content > a.opciones:focus {
   border-color: var(--banano);
 }
 .mandarina > .product-content > a.opciones {
   color: var(--mandarina);
   background-color: var(--mandarina-light);
 }
-.mandarina > .product-content > a.opciones:hover {
+.mandarina > .product-content > a.opciones:hover,
+.mandarina > .product-content > a.opciones:active,
+.mandarina > .product-content > a.opciones:focus {
   border-color: var(--mandarina);
 }
 
@@ -1050,7 +1071,7 @@ footer a > span {
 footer a {
   line-height: 1;
 }
-.wapp, 
+.wapp,
 .insta {
   color: inherit;
   background-repeat: no-repeat;
@@ -1060,15 +1081,15 @@ footer a {
   width: 24px;
   vertical-align: text-bottom;
 }
-.wapp{
-    display: inline-block;
-    background-image: url(/static/img/wapp-logo.svg);
-    margin-right: 10px;
+.wapp {
+  display: inline-block;
+  background-image: url(/static/img/wapp-logo.svg);
+  margin-right: 10px;
 }
 .insta {
-    background-image: url(/static/img/insta-logo.svg);
-    margin-bottom: 2em;
-    position: relative;
+  background-image: url(/static/img/insta-logo.svg);
+  margin-bottom: 2em;
+  position: relative;
 }
 .form-map {
   margin-bottom: 3em;
@@ -1085,22 +1106,22 @@ footer a {
   z-index: 1;
   bottom: 150%;
   left: 50%;
-  transform:translateX(-50%);
-  transition: var(--duration) opacity;   
+  transform: translateX(-50%);
+  transition: var(--duration) opacity;
 }
 .tooltip:before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    transform: translateX(-50%);
-    border: 10px solid #000;
-    border-color: var(--footer-content-color) transparent transparent transparent;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  border: 10px solid #000;
+  border-color: var(--footer-content-color) transparent transparent transparent;
 }
 .insta:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-  }
+  visibility: visible;
+  opacity: 1;
+}
 
 /* Larger than mobile (default point when grid becomes active) */
 @media (min-width: 520px) {
