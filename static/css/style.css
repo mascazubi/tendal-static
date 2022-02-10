@@ -162,14 +162,14 @@ nav > ul {
   overflow-x: auto;
   scrollbar-width: thin;
 }
-/* nav > ul::-webkit-scrollbar {
-    width: 5px;
-    height: 8px;
-    background-color: #f0f0f0;
-  }
+nav > ul::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: #f0f0f0;
+}
 nav > ul::-webkit-scrollbar-thumb {
-    background: #cdcdcd;
-} */
+  background: #cdcdcd;
+}
 nav:after,
 nav:before {
   content: "";
