@@ -1008,8 +1008,6 @@ input.accordion:checked ~ .tab-content {
   margin-bottom: 2em;
   margin-top: 2px;
   padding-top: 1em;
-  /* border-top: 1px solid #bababa;
-    border-bottom: 1px solid #bababa; */
 }
 .info {
   display: flex;
