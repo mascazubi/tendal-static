@@ -1086,10 +1086,11 @@ footer a {
   background-image: url(/static/img/wapp-logo.svg);
   margin-right: 10px;
 }
+.socials {
+  position: relative;
+}
 .insta {
   background-image: url(/static/img/insta-logo.svg);
-  margin-bottom: 2em;
-  position: relative;
 }
 .form-map {
   margin-bottom: 3em;
@@ -1115,12 +1116,16 @@ footer a {
   left: 50%;
   top: 100%;
   transform: translateX(-50%);
-  border: 10px solid #000;
+  border: 10px solid var(--footer-content-color);
   border-color: var(--footer-content-color) transparent transparent transparent;
 }
-.insta:hover .tooltip {
+.socials:hover .tooltip,
+.link-social:focus .socials .tooltip {
   visibility: visible;
   opacity: 1;
+}
+.copy {
+  margin-top: 3em;
 }
 
 /* Larger than mobile (default point when grid becomes active) */
