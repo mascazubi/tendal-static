@@ -162,14 +162,15 @@ nav > ul {
   overflow-x: auto;
   scrollbar-width: thin;
 }
-nav > ul::-webkit-scrollbar {
+/* makes scrollbar always visible on mibile */
+/* nav > ul::-webkit-scrollbar {
   width: 5px;
   height: 5px;
   background-color: #f0f0f0;
 }
 nav > ul::-webkit-scrollbar-thumb {
   background: #cdcdcd;
-}
+} */
 nav:after,
 nav:before {
   content: "";
@@ -653,7 +654,6 @@ a.opciones {
  * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
-
 /**
  * ----------------------------------------
  * animation scale-up-center
@@ -936,10 +936,6 @@ a.opciones {
   transition: 0.4s;
   overflow: hidden;
 }
-/* .value a {
-    color: white;
-    background-color: #042779bd;
-} */
 .tab-label {
   display: flex;
   padding: 1em;
@@ -972,9 +968,6 @@ a.opciones {
 .tab-close {
   display: none;
 }
-/* .tab-close:hover {
-        background: darken(red, 10%);
-} */
 input.accordion {
   position: absolute;
   opacity: 0;
