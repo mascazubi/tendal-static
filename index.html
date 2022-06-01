@@ -27,9 +27,8 @@
         <link rel="stylesheet" href="static/css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">  
-        <meta name="theme-color" content="#ffffff" />
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+        <meta name="theme-color" content="#f6ede4" />
         <!-- Apple / Android icons -->
         <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/static/img/favicon-180.png"/>
         <link rel="manifest" href="manifest.json">
@@ -59,10 +58,11 @@
             <!-- hero -->
             <section class="hero">
                 <div class="hero-content">
-                    <img src="/static/img/mix.png.webp" alt="mix de alimentos deshidratados incluyendo frutilla, papaya, manzana y piña">
+                    <div class="hero-img-container">
+                        <img src="/static/img/mix.png.webp" alt="Mix de alimentos deshidratados incluyendo frutilla, papaya, manzana y piña">
+                    </div>
                     <div class="hero-desc">
-                        <h2>Descubre</h2>
-                        <p>Alimentos organicos de productores locales, deshidratados con energía solar térmica</p>
+                        <h1>Descubre alimentos <span class="text-secondary">organicos y locales</span> deshidratados con <span class="text-accent">energía solar</span></h1>
                         <div class="features">
                             <div class="features-layout">
                                 <div class="feature">
@@ -81,25 +81,22 @@
                         </div>
                     </div>
                 </div>
-
             </section>
-            <!-- content sections -->
             <!-- prouctos -->
             <section id="productos" class="products-style">
-                <h1>Productos</h1>
                 <div class="products-layout">
-                    <div class="product manzana">
+                    <div class="product">
                         <a href="#modalManzana" class="opciones">
-                            <img src="/static/img/manzana.png.webp"  class="product-img" alt="manzana">
+                            <img src="/static/img/manzana.png.webp"  class="product-img" alt="Manzanas frescas">
                         </a>
                         <div class="product-content">
                             <h2>Manzana</h2>
                             <p>
                                 Fruta seleccionada de plantaciones nacionales con las debidas labores de poscosecha y control de calidad permanente e inocuidad en el proceso.
                             </p>
-                            <a href="#modalManzana" class="opciones">✂ Cortes</a>
+                            <a href="#modalManzana" class="opciones btn">✂ Cortes</a>
                             <div id="modalManzana" class="">
-                                <div class="items op-manzana op">
+                                <div class="items op card">
                                     <div class="modal-close">
                                         <a href="#close" class="op-close"></a>
                                     </div>
@@ -128,9 +125,9 @@
                             <p>
                                 Fruta seleccionada de plantaciones nacionales con las debidas labores de poscosecha y control de calidad permanente e inocuidad en el proceso.
                             </p>
-                            <a href="#modalFrutilla" class="opciones">✂ Cortes</a>
+                            <a href="#modalFrutilla" class="opciones btn">✂ Cortes</a>
                             <div id="modalFrutilla" class="">
-                                <div class="items op-frutilla op">
+                                <div class="items op card">
                                     <div class="modal-close">
                                         <a href="#close" class="op-close"></a>
                                     </div>
@@ -154,9 +151,9 @@
                             <p>
                                 Fruta seleccionada de plantaciones nacionales con las debidas labores de poscosecha y control de calidad permanente e inocuidad en el proceso.
                             </p>
-                            <a href="#modalPina" class="opciones">✂ Cortes</a>
+                            <a href="#modalPina" class="opciones btn">✂ Cortes</a>
                             <div id="modalPina" class="">
-                                <div class="items op-pina op">
+                                <div class="items op card">
                                     <div class="modal-close">
                                         <a href="#close" class="op-close"></a>
                                     </div>
@@ -185,9 +182,9 @@
                             <p>
                                 Fruta seleccionada de plantaciones nacionales con las debidas labores de poscosecha y control de calidad permanente e inocuidad en el proceso.
                             </p>
-                            <a href="#modalPapaya" class="opciones">✂ Cortes</a>
+                            <a href="#modalPapaya" class="opciones btn">✂ Cortes</a>
                             <div id="modalPapaya" class="">
-                                <div class="items op-papaya op">
+                                <div class="items op card">
                                     <div class="modal-close">
                                         <a href="#close" class="op-close"></a>
                                     </div>
@@ -211,9 +208,9 @@
                             <p>
                                 Fruta seleccionada de plantaciones nacionales con las debidas labores de poscosecha y control de calidad permanente e inocuidad en el proceso.
                             </p>
-                            <a href="#modalMango" class="opciones">✂ Cortes</a>
+                            <a href="#modalMango" class="opciones btn">✂ Cortes</a>
                             <div id="modalMango" class="">
-                                <div class="items op-mango op">
+                                <div class="items op card">
                                     <div class="modal-close">
                                         <a href="#close" class="op-close"></a>
                                     </div>
@@ -237,9 +234,9 @@
                             <p>
                                 Fruta seleccionada de plantaciones nacionales con las debidas labores de poscosecha y control de calidad permanente e inocuidad en el proceso.
                             </p>
-                            <a href="#modalPitahaya" class="opciones">✂ Cortes</a>
+                            <a href="#modalPitahaya" class="opciones btn">✂ Cortes</a>
                             <div id="modalPitahaya" class="">
-                                <div class="items op-pitahaya op">
+                                <div class="items op card">
                                     <div class="modal-close">
                                         <a href="#close" class="op-close"></a>
                                     </div>
@@ -263,9 +260,9 @@
                             <p>
                                 Banano Gros Michel (criollo) cultivado sin agroquímicos y deshidratado libre de aditivos o azúcar.
                             </p>
-                            <a href="#modalBanano" class="opciones">✂ Cortes</a>
+                            <a href="#modalBanano" class="opciones btn">✂ Cortes</a>
                             <div id="modalBanano" class="">
-                                <div class="items op-banano op">
+                                <div class="items op card">
                                     <div class="modal-close">
                                         <a href="#close" class="op-close"></a>
                                     </div>
@@ -289,9 +286,9 @@
                             <p>
                                 Fruta cultivada en Pimampiro, sin agroquímicos, deshidratada en rodajas (con semillas), libre de aditivos o azúcar.
                             </p>
-                            <a href="#modalMandarina" class="opciones">✂ Cortes</a>
+                            <a href="#modalMandarina" class="opciones btn">✂ Cortes</a>
                             <div id="modalMandarina" class="">
-                                <div class="items op-mandarina op">
+                                <div class="items op card">
                                     <div class="modal-close">
                                         <a href="#close" class="op-close"></a>
                                     </div>
@@ -463,7 +460,7 @@
             <section id="contacto" class="contact">
                 <div class="form-map">
                     <div class="map">
-                        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-78.06532859802248%2C0.4677720556660203%2C-78.04706811904909%2C0.48004542424839575&amp;layer=mapnik&amp;marker=0.47390874267551364%2C-78.05619835853577"></iframe>
+                        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-78.06532859802248%2C0.4677720556660203%2C-78.04706811904909%2C0.48004542424839575&amp;layer=mapnik&amp;marker=0.47390874267551364%2C-78.05619835853577" loading="lazy"></iframe>
                     </div>
                 </div>
                 <address class="info b-pad">
