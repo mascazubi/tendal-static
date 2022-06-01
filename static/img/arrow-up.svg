@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="9.8814936mm"
+   height="8.8774166mm"
+   viewBox="0 0 9.8814936 8.8774166"
+   version="1.1"
+   id="svg20089"
+   sodipodi:docname="arrow-up.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview20133"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="14.067531"
+     inkscape:cx="28.718615"
+     inkscape:cy="14.785821"
+     inkscape:window-width="2560"
+     inkscape:window-height="1377"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs20086">
+    <marker
+       style="overflow:visible"
+       id="Arrow1-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="4.0606604"
+       markerHeight="6.7071066"
+       viewBox="0 0 4.0606602 6.7071068"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         id="path5057-9"
+         transform="rotate(180,0.125,0)" />
+    </marker>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(211.33058,190.69291)">
+    <path
+       id="path20145"
+       style="color:#000000;fill:#000000;-inkscape-stroke:none"
+       d="M -209.19118 -190.69343 L -211.33006 -189.38085 L -211.05463 -188.92971 L -209.67848 -189.77307 C -210.29242 -186.97245 -210.18004 -185.09663 -209.59942 -183.8494 C -208.98562 -182.53089 -207.83187 -181.97081 -206.63268 -181.8459 C -205.43349 -181.721 -204.1692 -181.99651 -203.18379 -182.30066 C -202.69109 -182.45274 -202.26812 -182.6134 -201.96113 -182.73836 C -201.80763 -182.80086 -201.68303 -182.85335 -201.59371 -182.89235 C -201.54901 -182.91185 -201.51366 -182.92828 -201.48829 -182.93938 C -201.46289 -182.95048 -201.43253 -182.96213 -201.45883 -182.95333 L -201.62885 -183.45304 C -201.66905 -183.43954 -201.67203 -183.436 -201.69913 -183.4241 C -201.72623 -183.4122 -201.76108 -183.39814 -201.80455 -183.37914 C -201.89155 -183.34114 -202.01188 -183.28906 -202.16008 -183.22877 C -202.45647 -183.10812 -202.86593 -182.95285 -203.33985 -182.80657 C -204.2877 -182.51402 -205.49842 -182.26056 -206.5779 -182.373 C -207.65739 -182.48543 -208.58576 -182.92796 -209.11935 -184.07419 C -209.62276 -185.15558 -209.75862 -186.91413 -209.16534 -189.63871 L -208.33025 -188.27755 L -207.87911 -188.55247 L -209.19118 -190.69343 z " />
+  </g>
+</svg>
