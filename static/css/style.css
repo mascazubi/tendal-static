@@ -75,32 +75,21 @@ a {
   color: inherit;
   white-space: nowrap;
 }
-a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
-    a):not(.logo-container a):not(.op-close):not(footer a) {
+.body-link {
   font-weight: inherit;
   cursor: pointer;
   text-decoration: none;
-  color: inherit;
-  background: linear-gradient(to bottom, var(--pina) 0%, var(--pina) 100%);
-  background-position: 0 100%;
-  background-repeat: repeat-x;
-  background-size: 10px 3px;
-  transition: all var(--duration) linear;
+  color: var(--accent);
+  transition: text-decoration var(--duration) linear;
+  font-weight: medium;
 }
-a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
-    a):not(.logo-container a):not(.op-close):hover,
-a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
-    a):not(.logo-container a):not(.op-close):active,
-a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
-    a):not(.logo-container a):not(.op-close):focus {
-  background-size: 4px 50px;
-  color: #00000091;
+.body-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
-a:not(nav a):not(.info-item a):not(.opciones):not(.pedido-items
-    a):not(.service-extra a):not(.logo-container a):not(.op-close):not(footer
-    a):after {
+.body-link-ext:after {
   content: "\2197\FE0E";
-  font-weight: bold;
+  font-weight: medium;
 }
 .logo-container {
   margin: 1.8em auto 1.5em;
@@ -632,9 +621,33 @@ img.product-img {
   background-color: black;
   margin-right: 14px;
 }
+.service {
+  width:90vw;
+  margin-inline: auto;
+  background-color: white;
+}
+.service-header {
+  background-size: cover;
+  height: 250px;
+  display: flex;
+  align-items: end;
+}
+.service-desi {
+  background-image: linear-gradient(to bottom, transparent, rgba(117, 19, 93, 0.73)), url(/static/img/bandejas3.jpg.webp);
+}
+.service-secado {
+  background-image: linear-gradient(to bottom, transparent, rgba(14, 54, 130, 0.73)), url(/static/img/secado.webp);
+}
+.service-header > h3 {
+  color: white;
+  padding: 1em;
+}
+.service > p {
+  padding: 1.5em;
+}
 .services-style > h2,
 .qualities-style > h2 {
-  padding-bottom: 1.5em;
+  padding-bottom: 1em;
 }
 .services-layout > p,
 .qualities-style > p {
@@ -645,14 +658,11 @@ img.product-img {
   margin-right: auto;
   margin-left: auto;
 }
-.service:last-of-type {
-  max-width: 100%;
-}
 .service-extra {
   padding: 1em 1.5em;
-  background-color: rgba(255, 0, 0, 0.17);
   border-radius: 8px;
-  color: white;
+  text-align: center;
+  margin-bottom: 1em;
 }
 .products-layout,
 .services-layout,
@@ -685,7 +695,6 @@ img.product-img {
   margin-bottom: 1rem;
   margin-top: 0.6em;
 }
-.service > img,
 .quality > img,
 .value > img {
   background-color: transparent;
