@@ -626,6 +626,11 @@ img.product-img {
   margin-inline: auto;
   background-color: white;
 }
+.service-extra {
+  padding: 1em 1.5em;
+  text-align: center;
+  margin-bottom: 2em;
+}
 .service-header {
   background-size: cover;
   height: 250px;
@@ -642,27 +647,22 @@ img.product-img {
   color: white;
   padding: 1em;
 }
-.service > p {
+.service > p,
+.quality > p {
   padding: 1.5em;
 }
-.services-style > h2,
-.qualities-style > h2 {
+.services > h3
+.qualities > h3 {
   padding-bottom: 1em;
 }
-.services-layout > p,
-.qualities-style > p {
-  margin-bottom: 4em;
+.services > p,
+.qualities > p {
+  margin-top: 1em;
+  margin-bottom: 2em;
   text-align: center;
 }
-.qualities-style > p {
-  margin-right: auto;
-  margin-left: auto;
-}
-.service-extra {
+.qualities > p {
   padding: 1em 1.5em;
-  border-radius: 8px;
-  text-align: center;
-  margin-bottom: 1em;
 }
 .products-layout,
 .services-layout,
@@ -706,7 +706,7 @@ img.product-img {
   margin-right: auto;
   border: 15px solid #0000000f;
 }
-.qualities-style {
+.qualities {
   position: relative;
   padding-bottom: 4em;
 }
