@@ -223,6 +223,7 @@ section h2 {
 .hero-img-container {
   /* shape-outside: url(/static/img/mix.png.webp); */
   width: 90vw;
+  margin-inline: auto;
 }
 .hero-img-container img {
   width: 100%;
@@ -230,6 +231,7 @@ section h2 {
   display: flex;
   align-self: center;
   max-width: 560px;
+  margin-inline: auto;
 }
 .hero-content h1 {
   text-align: center;
@@ -349,6 +351,7 @@ img.product-img {
   display: block;
   margin-inline: auto;
   text-align: center;
+  width: 250px;
 }
 .product-content > a.opciones:hover,
 .product-content > a.opciones:active,
@@ -684,7 +687,12 @@ img.product-img {
 .story {
   margin-bottom: 3em;
 }
-.product-content > h2,
+.product-content > h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 0.6em;
+    margin-inline: auto;
+}
 .service > h3,
 .quality > h3,
 .value > h3 {
@@ -708,9 +716,6 @@ img.product-img {
   margin-bottom: 1.5em;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
-  /* filter: drop-shadow(10px 3px 0px black); */
-  box-shadow: 10px 5px 0px black;
 }
 .qualities {
   position: relative;
@@ -811,11 +816,9 @@ input.accordion:checked ~ .tab-content {
   padding: 1em;
 }
 .contact {
-  background-color: #f2efe9;
-  color: #353534;
   padding-bottom: 1em;
 }
-.form {
+/* .form {
   display: flex;
   flex-direction: column;
 }
@@ -829,16 +832,21 @@ input.accordion:checked ~ .tab-content {
 }
 .contact-form-container {
   margin-bottom: 4em;
+} */
+.map-container {
+  margin-bottom: 3em;
 }
 .map {
-  height: 300px;
+  height: 400px;
   margin-bottom: 2em;
   margin-top: 2px;
-  padding-top: 1em;
+  width: 90vw;
 }
 .info {
   display: flex;
   flex-direction: column;
+  width: 90vw;
+  margin-inline: auto;
 }
 .info-item {
   display: flex;
@@ -847,31 +855,52 @@ input.accordion:checked ~ .tab-content {
   align-items: center;
   flex-direction: column;
 }
+.info-item a:first-of-type {
+  margin-top: 1em;
+}
 .info-item p {
-  margin-top: -0.8em;
-  background-color: #0000000d;
-  padding: 0.8em 1.2em;
   width: max-content;
-  border-radius: 8px;
-  border: 1px solid transparent;
-  transition: border-color var(--duration);
-}
-.info-item p:hover {
-  border: 1px solid #0000001f;
-}
-.info-item:last-of-type p {
-  background-color: transparent;
-}
-.info-item:last-of-type p:hover {
-  border: 1px solid transparent;
+  margin: 0;
 }
 .info-item a {
+  margin-top: -0.2em;
+  margin-bottom: 1em;
+  background-color: white;
+  padding: .8em 3em;
   text-decoration: none;
-  font-weight: normal;
+  border-radius: 50px;
+  border: 1px solid black;
+  transition-property: background-color, color;
+  transition-duration: var(--duration);
+  transition-timing-function: ease;
+}
+.info-item a:hover {
+  background-color: black;
+  color: white;
+}
+.wapp-combo {
+  display: flex;
+  flex-direction: row;
+}
+.wapp {
+  display: inline-block;
+  margin-right: 10px;
+  mask-position: 0px bottom;
+  -webkit-mask-position: 0px bottom;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  background-color: black;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url(/static/img/wapp-logo.svg);
+  -webkit-mask-image: url(/static/img/wapp-logo.svg);
+  transition: background-color var(--duration) ease;
+}
+.info-item a:hover > .wapp {
+  background-color: white;
 }
 footer {
   padding: 2em 0;
-  background-color: #f2efe9;
 }
 .footer-wrap {
   display: flex;
@@ -899,24 +928,16 @@ footer a {
   width: 24px;
   vertical-align: text-bottom;
 }
-.wapp {
-  display: inline-block;
-  background-image: url(/static/img/wapp-logo.svg);
-  margin-right: 10px;
-}
 .socials {
   position: relative;
 }
 .insta {
   background-image: url(/static/img/insta-logo.svg);
 }
-.form-map {
-  margin-bottom: 3em;
-}
 .tooltip {
   visibility: hidden;
   opacity: 0;
-  background-color: var(--footer-content-color);
+  background-color: black;
   color: #fff;
   text-align: center;
   padding: 1em;
@@ -927,6 +948,7 @@ footer a {
   left: 50%;
   transform: translateX(-50%);
   transition: var(--duration) opacity;
+  width: max-content;
 }
 .tooltip:before {
   content: "";
@@ -934,8 +956,8 @@ footer a {
   left: 50%;
   top: 100%;
   transform: translateX(-50%);
-  border: 10px solid var(--footer-content-color);
-  border-color: var(--footer-content-color) transparent transparent transparent;
+  border: 10px solid black;
+  border-color: black transparent transparent transparent;
 }
 .socials:hover .tooltip,
 .link-social:focus .socials .tooltip {
