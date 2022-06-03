@@ -211,7 +211,7 @@ section h2 {
 .hero {
   display: flex;
   flex-direction: column;
-  margin-top: 0;
+  margin-top: 1em;
   width: 100%;
   padding-top: 0;
 }
@@ -227,22 +227,39 @@ section h2 {
   /* shape-outside: url(/static/img/mix.png.webp); */
   width: 90vw;
   margin-inline: auto;
+  position: relative;
+}
+.hero-img-wrapper{
+  max-width: 750px;
+  margin-inline: auto;
+}
+.hero-img-wrapper::before {
+  content: '';
+  position: absolute;
+  height: 40%;
+  width: 38%;
+  mask-position: 0px bottom;
+  -webkit-mask-position: 0px bottom;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  background-color: var(--accent);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url(/static/img/tendal-sun.svg);
+  -webkit-mask-image: url(/static/img/tendal-sun.svg);
+  z-index: -1;
+  top:0;
+  right: 0;
+  transform: rotate(0deg);
+  mask-border: unset;
 }
 .hero-img-container img {
   width: 100%;
-  padding-top: 2em;
-  display: flex;
-  align-self: center;
-  max-width: 560px;
-  margin-inline: auto;
 }
 .hero-content h1 {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-}
-.hero-desc {
-  margin-top: 2em;
 }
 .features-layout {
   display: flex;
@@ -263,7 +280,7 @@ section h2 {
   flex-direction: column;
   align-items: center;
   width: 90px;
-  height: 165px;
+  height: 140px;
   flex-basis: auto;
   text-align: center;
   font-weight: normal;
@@ -300,6 +317,7 @@ section h2 {
   font-family: var(--rubik);
   font-size: 1em;
   line-height: 1.3;
+  margin-bottom: 0;
 }
 /* Products */
 .product {
@@ -422,10 +440,10 @@ img.product-img {
 }
 .op-item-img {
   border-radius: 100%;
-  width: 170px;
-  height: 170px;
   margin-bottom: 1em;
   border: 5px solid #0000000f;
+  width: 190px;
+  height: 190px;
 }
 .op-item-name {
   font-size: 1em;
@@ -995,6 +1013,9 @@ footer a {
   .hero h2 {
     margin-top: 0.5em;
   }
+  .hero-img-wrapper {
+    max-width: 520px;
+  }
   .number p {
     font-size: 5rem;
   }
@@ -1074,6 +1095,33 @@ footer a {
   nav > ul {
     width: 95vw;
   }
+  .hero {
+    padding-top: 1em;
+    padding-bottom: 3em;
+  }
+  .hero-content {
+    flex-direction: row-reverse;
+    align-items: center;
+    max-width: 1300px;
+    margin-inline: auto;
+  }
+  .hero-img-container {
+    width: 50vw;
+  }
+  .hero-img-wrapper {
+    max-width: 750px;
+  }
+  .hero-desc {
+    width: 44vw;
+  }
+  .hero-desc > h1 {
+    text-align: left;
+    font-size: 3.2rem;
+  }
+  .features-layout {
+    margin-left: 0;
+    max-width: 300px;
+  }
   .op-item-img {
     border-radius: 100%;
     width: 20vw;
@@ -1081,6 +1129,7 @@ footer a {
     margin-bottom: 1em;
     border: 5px solid #0000000f;
     aspect-ratio: 1;
+    max-width: 250px;
   }
   .services-layout,
   .qualities-layout {
@@ -1117,32 +1166,14 @@ footer a {
 
 /* Larger than phablet */
 @media (min-width: 900px) {
-  .hero {
-    padding-top: 1em;
-    padding-bottom: 3em;
-  }
-  .hero-content {
-    flex-direction: row-reverse;
-    align-items: center;
-    max-width: 1390px;
-    margin-inline: auto;
-  }
-  .hero-img-container {
-    width: 46vw;
-  }
   .hero-desc {
     width: 45vw;
-  }
-  .hero-desc > h1 {
-    text-align: left;
-    font-size: 3.5rem;
   }
   .features-layout {
     margin-left: unset;
   }
   .items {
     max-width: 700px;
-    height: 80vh;
   }
   .op-items {
     flex-direction: row;
@@ -1229,6 +1260,9 @@ footer a {
   h3 {
     font-size: 2.8rem;
   }
+  section {
+    padding-block: 3em;
+  }
   .hero-img-container {
     width: 45vw;
   }
@@ -1254,12 +1288,18 @@ footer a {
   .products-layout {
     max-width: 1400px;
   }
+  .offer {
+    padding-top: 1em;
+  }
   .offer-img {
     background-size: 58%;
   }
   .service > h3, .quality > h3, .value > h3 {
     width: auto;
     padding-inline: 1em;
+  }
+  .qualities {
+    padding-bottom: 1em;
   }
   .quality {
     margin-bottom: 3em;
@@ -1297,16 +1337,16 @@ footer a {
     font-size: calc(1.1 * var(--base-font-size));
   }
   .hero-img-container {
-    width: 50vw;
+    width: 45vw;
   }
   .hero-img-container img {
     max-width: 740px;
   }
   .hero-desc {
-    width: 44vw;
+    width: 41vw;
   }
   .hero-desc > h1 {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   .offer-img {
     background-size: 50%;
@@ -1328,6 +1368,14 @@ footer a {
   .service-header > h3,
   .service > p {
     padding: 50px;
+  }
+}
+@media (min-width: 1480px) {
+  .hero-desc > h1 {
+    font-size: 5rem;
+  }
+  .hero-img-container {
+    width: 45vw;
   }
 }
 @media (min-width: 1980px) {
