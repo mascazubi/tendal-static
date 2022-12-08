@@ -1,5 +1,6 @@
 html {
   scroll-padding-top: 4em;
+  overflow: auto;
   /* fonts */
   --rubik: "Rubik", Helvetica, Arial, sans-serif;
   /* brnad colors */
@@ -9,16 +10,6 @@ html {
   ---alternate: hsl(187, 24%, 44%);
   /* logo */
   --logo-color: black;
-
-
-  /* old colors to remove */
-  --green: #1d8263;
-  --blue: #1f3872;
-  --dark-blue: #172953;
-  --yellow: #ffb81c;
-  --brown: #782f40;
-  --dark-brown: #4f1e2a;
-
   /* pedidos */
   --pedidos-content-color: #33b333;
   /* servicios */
@@ -28,12 +19,11 @@ html {
   --dark-blue-alt: #021e60;
   /* footer */
   --footer-content-color: #353534;
-  
-  /* prod image config */
+  /* prod images */
    --prod-img-size: 250px;
    --prod-shadow-size: -20px -10px 0;
-  
    /* properties */
+  --section-heading-block-spacing: 2em;
   --duration: 0.3s;
   --radius:4px;
 }
@@ -111,7 +101,7 @@ a {
   color: var(--logo-color);
 }
 nav {
-  z-index: 2;
+  z-index: 3;
   position: sticky;
   top: 0px;
   display: flex;
@@ -164,8 +154,9 @@ nav a {
   color: black;
   display: inline-block;
   text-align: center;
-  width: 105px;
+  width: max-content;
   height: 22px;
+  padding-inline: 1em;
 }
 nav a:hover,
 nav a:active {
@@ -191,6 +182,12 @@ nav > ul > li:first-child {
 nav > ul > li:last-child {
   margin-right: 1.2em;
 }
+.nav-productos {
+  margin-bottom: 5em;
+  top: 46px;
+  z-index: 2;
+}
+
 .tendal-inline {
   font-weight: bold;
   letter-spacing: 1px;
@@ -213,7 +210,6 @@ section h2 {
   flex-direction: column;
   margin-top: 1em;
   width: 100%;
-  padding-top: 0;
 }
 .hero-content {
   display: flex;
@@ -324,6 +320,7 @@ section h2 {
   margin-right: auto;
   margin-left: auto;
   max-width: 85vw;
+  scroll-margin-top: 5em;
 }
 .product > a.opciones {
   margin-left: auto;
@@ -537,6 +534,7 @@ img.product-img {
   background-color: var(---alternate);
   margin-inline: auto;
   max-width: 995px;
+  margin-bottom: 2em;
 }
 .offer-content {
   position: relative;
@@ -552,9 +550,6 @@ img.product-img {
   margin-right: auto;
   text-align: center;
 }
-.pedidos > h2 {
-  padding: 1em 0;
-}
 .pedidos {
   position: relative;
   width: 100%;
@@ -562,6 +557,7 @@ img.product-img {
 .pedido-items {
   display: flex;
   align-items: center;
+  margin-top: 2em;
 }
 .pedido-items a {
   color: black;
@@ -1095,10 +1091,6 @@ footer a {
   nav > ul {
     width: 95vw;
   }
-  .hero {
-    padding-top: 1em;
-    padding-bottom: 3em;
-  }
   .hero-content {
     flex-direction: row-reverse;
     align-items: center;
@@ -1259,9 +1251,6 @@ footer a {
 @media (min-width: 1200px) {
   h3 {
     font-size: 2.8rem;
-  }
-  section {
-    padding-block: 3em;
   }
   .hero-img-container {
     width: 45vw;
