@@ -7,7 +7,7 @@ html {
   --primary: hsl(30, 50%, 93%);
   --accent: hsl(13, 94%, 63%);
   --secondary: hsl(336, 12%, 44%);
-  ---alternate: hsl(187, 24%, 44%);
+  --alternate: hsl(187, 24%, 44%);
   /* logo */
   --logo-color: black;
   /* pedidos */
@@ -20,10 +20,11 @@ html {
   /* footer */
   --footer-content-color: #353534;
   /* prod images */
-   --prod-img-size: 250px;
-   --prod-shadow-size: -20px -10px 0;
+  --prod-img-size: 250px;
+  --prod-shadow-size: -20px -10px 0;
    /* properties */
-  --section-heading-block-spacing: 2em;
+  --section-block-spacing: 3em;
+  --flex-gap: 60px;
   --duration: 0.3s;
   --radius:4px;
 }
@@ -199,7 +200,7 @@ main {
   margin-inline: auto;
 }
 section {
-  padding-block: 2em;
+  padding-block: var(--section-block-spacing);
 }
 section h1,
 section h2 {
@@ -286,7 +287,7 @@ section h2 {
   -webkit-mask-position: 0px bottom;
   mask-size: contain;
   -webkit-mask-size: contain;
-  background-color: var(---alternate);
+  background-color: var(--alternate);
   width: 45px;
   height: 45px;
   margin-bottom: 10px;
@@ -316,9 +317,10 @@ section h2 {
   margin-bottom: 0;
 }
 /* Products */
+.products-style {
+  padding-top: 0;
+}
 .product {
-  margin-right: auto;
-  margin-left: auto;
   max-width: 85vw;
   scroll-margin-top: 5em;
 }
@@ -395,7 +397,6 @@ img.product-img {
   border-radius: var(--radius);
   border: 1px solid black;
   box-shadow: 8px 8px 0px black;
-  margin-inline: 1.5em;
   overflow: hidden;
 }
 .items {
@@ -519,6 +520,7 @@ img.product-img {
 }
 .offer {
   color: white;
+  margin-top: 2em;
 }
 .offer-img {
   background-image: url(/static/img/offerta-img.jpg.webp);
@@ -531,10 +533,9 @@ img.product-img {
   width: 90vw;
   max-width: 995px;
   height: 520px;
-  background-color: var(---alternate);
+  background-color: var(--alternate);
   margin-inline: auto;
   max-width: 995px;
-  margin-bottom: 2em;
 }
 .offer-content {
   position: relative;
@@ -644,7 +645,6 @@ img.product-img {
 }
 .service {
   width:90vw;
-  margin-inline: auto;
   background-color: white;
 }
 .service-extra {
@@ -693,7 +693,10 @@ img.product-img {
 .qualities-layout {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  margin-inline: auto;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--flex-gap);
 }
 .product,
 .service,
@@ -701,15 +704,6 @@ img.product-img {
 .value {
   display: flex;
   flex-direction: column;
-}
-.product {
-  margin-bottom: 5em;
-}
-.product:last-of-type,
-.service,
-.quality,
-.story {
-  margin-bottom: 3em;
 }
 .product-content > h2 {
     text-align: center;
@@ -727,7 +721,6 @@ img.product-img {
   margin-inline: auto;
 }
 .quality > p {
-  padding-inline: 1.5em;
   margin-top: .5em;
   text-align: center;
 }
@@ -744,6 +737,9 @@ img.product-img {
 .qualities {
   position: relative;
 }
+.quality {
+  max-width: 85vw;
+}
 .quality-style {
   background-color: white;
   color: black;
@@ -753,6 +749,7 @@ img.product-img {
 }
 .stories {
   display: flex;
+  gap: var(--flex-gap);
   flex-direction: column;
   margin-top: 3em;
   width: 90vw;
@@ -777,12 +774,11 @@ img.product-img {
 .values-layout {
   max-width: 700px;
   width: 90vw;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
+  margin-top: 2em;
 }
 .values {
   padding-top: 0;
-  padding-bottom: 5em;
   position: relative;
 }
 .value {
@@ -929,7 +925,7 @@ input.accordion:checked ~ .tab-content {
   background-color: white;
 }
 footer {
-  padding: 2em 0;
+  padding: 2em 0 4em 0;
 }
 .footer-wrap {
   display: flex;
@@ -1047,8 +1043,6 @@ footer a {
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
   }
   .product {
     max-width: 24em;
@@ -1131,17 +1125,13 @@ footer a {
     max-width: 1525px;
     margin-left: auto;
     margin-right: auto;
-    justify-content: center;
-  }
-  .service,
-  .quality {
-    margin-bottom: 4em;
   }
   .service {
-    max-width: 42%;
+    max-width: 43%;
+    min-width: 450px;
   }
   .quality {
-    max-width: 50%;
+    max-width: 40%;
   }
   .service > h3, .quality > h3, .value > h3 {
     width: auto;
@@ -1195,9 +1185,6 @@ footer a {
   .offer-content > h1 {
     text-align: left;
     padding-bottom: 0.2em;
-  }
-  .quality > p {
-    padding-inline: 2em;
   }
   .contact {
     padding-bottom: 3em;
@@ -1287,18 +1274,11 @@ footer a {
     width: auto;
     padding-inline: 1em;
   }
-  .qualities {
-    padding-bottom: 1em;
-  }
   .quality {
-    margin-bottom: 3em;
-  }
-  .quality {
-    max-width: 33%;
+    max-width: 26%;
   }
   .story {
     max-width: 1160px;
-    margin-bottom: 4em;
   }
   .story:nth-of-type(odd) {
     margin-left: 0;
@@ -1345,14 +1325,8 @@ footer a {
     margin-right: auto;
     max-width: 1320px;
   }
-  .product {
-    margin-bottom: 6em;
-  }
   .products-layout {
     max-width: 1400px;
-  }
-  .service {
-    margin-inline: 3em;
   }
   .service-header > h3,
   .service > p {
