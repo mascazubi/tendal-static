@@ -8,8 +8,10 @@ html {
   --accent: hsl(13, 94%, 63%);
   --secondary: hsl(336, 12%, 44%);
   --alternate: hsl(187, 24%, 44%);
+  --gray: lightgray;
+  --light-gray: hsl(0, 0%, 92%);
   /* logo */
-  --logo-color: black;
+  --logo-color: white;
   /* pedidos */
   --pedidos-content-color: #33b333;
   /* servicios */
@@ -24,21 +26,74 @@ html {
   --prod-shadow-size: -20px -10px 0;
    /* properties */
   --section-block-spacing: 3em;
-  --flex-gap: 60px;
+  --gap-sm: .8em;
+  --gap-md: 2em;
   --duration: 0.3s;
   --radius:4px;
+  --rebanada: 90%;
+
 }
 ::selection {
   color: white;
   background: var(--accent);
 }
-header {
+.hero {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-md);
+  padding-block: 6em;
+  padding-inline: 1em;
+  color: white;
+  background-color: black;
+  background: linear-gradient(#0000, #0000007a), url(/static/img/hero-bg.jpg);
+  background-position: bottom center;
+  background-size: cover;
+}
+.logo {
+  height: 10em;
+  mask-position: 0px bottom;
+  -webkit-mask-position: 0px bottom;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  background-color: var(--logo-color);
+  width: 10em;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url(/static/img/tendal-logo-flat.svg);
+  -webkit-mask-image: url(/static/img/tendal-logo-flat.svg);
+  color: var(--logo-color);
+  margin-bottom: 1em;
+}
+.hero-tag {
+  text-align: center;
+}
+.hero-tag h1 {
+  font-size: 5rem;
+}
+.hero-features {
+  display: flex;
+  gap: var(--gap-md);
   align-items: center;
 }
+.hero-feature {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.hero-dot {
+  min-width: 10px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: lightgreen;
+}
+
 body {
   font-family: var(--rubik);
-  background-color: var(--primary);
+  background-color: white;
   background-image: url(/static/img/dotnoise-light-grey.png);
 }
 h1,
@@ -83,39 +138,17 @@ a {
   content: "\2197\FE0E";
   font-weight: medium;
 }
-.logo-container {
-  margin: 1.8em auto 1.5em;
-}
-.logo {
-  height: 10em;
-  mask-position: 0px bottom;
-  -webkit-mask-position: 0px bottom;
-  mask-size: contain;
-  -webkit-mask-size: contain;
-  background-color: var(--logo-color);
-  width: 10em;
-  margin-bottom: 10px;
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  mask-image: url(/static/img/tendal-logo-flat.svg);
-  -webkit-mask-image: url(/static/img/tendal-logo-flat.svg);
-  color: var(--logo-color);
-}
 nav {
   z-index: 3;
   position: sticky;
   top: 0px;
   display: flex;
   align-items: center;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 400;
   letter-spacing: 1.1pt;
-  max-width: 1400px;
-  margin-inline: auto;
-  border-bottom: 1px solid black;
-  background-color: var(--primary);
-  background-image: url(/static/img/dotnoise-light-grey.png);
+  border-bottom: 1px solid var(--gray);
+  background-color: white;
   /* backdrop-filter: blur(10px); */
   /* box-shadow: 0 4px 5px rgba(0, 0, 0, 0.07); */
 }
@@ -139,7 +172,7 @@ nav:before {
 nav > ul {
   display: flex;
   list-style: none;
-  padding-block: 0.8em;
+  padding-block: .6em;
   margin-bottom: 0;
   overflow-x: auto;
   scrollbar-width: none;
@@ -151,17 +184,19 @@ nav > ul::-webkit-scrollbar {
 nav a {
   text-decoration: none;
   position: relative;
-  transition: color var(--duration);
+  transition: color var(--duration), background-color var(--duration);
   color: black;
   display: inline-block;
   text-align: center;
   width: max-content;
-  height: 22px;
-  padding-inline: 1em;
+  padding: .6em 1.5em;
+  background-color: transparent;
+  border-radius: 8px;
 }
 nav a:hover,
 nav a:active {
-  color: var(--accent);
+  color: black;
+  background-color: var(--light-gray);
 }
 /* makes scrollbar always visible on mibile */
 /* nav > ul::-webkit-scrollbar {
@@ -176,6 +211,7 @@ nav > ul li {
   margin-right: calc((100vw - (16.8px + (2.5 * 105px))) / 2);
   white-space: nowrap;
   margin-bottom: 0;
+  margin-right: 0;
 }
 nav > ul > li:first-child {
   margin-left: 1.2em;
@@ -206,172 +242,105 @@ section h1,
 section h2 {
   text-align: center;
 }
-.hero {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1em;
-  width: 100%;
-}
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-inline: 0.8em;
-}
-.hero-img-container {
-  /* shape-outside: url(/static/img/mix.png.webp); */
-  width: 90vw;
-  margin-inline: auto;
-  position: relative;
-}
-.hero-img-wrapper{
-  max-width: 750px;
-  margin-inline: auto;
-}
-.hero-img-wrapper::before {
-  content: '';
-  position: absolute;
-  height: 40%;
-  width: 38%;
-  mask-position: 0px bottom;
-  -webkit-mask-position: 0px bottom;
-  mask-size: contain;
-  -webkit-mask-size: contain;
-  background-color: var(--accent);
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  mask-image: url(/static/img/tendal-sun.svg);
-  -webkit-mask-image: url(/static/img/tendal-sun.svg);
-  z-index: -1;
-  top:0;
-  right: 0;
-  transform: rotate(0deg);
-  mask-border: unset;
-}
-.hero-img-container img {
-  width: 100%;
-}
-.hero-content h1 {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-.features-layout {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 360px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.features {
-  position: relative;
-  margin-inline: auto;
-  margin-top: 2em;
-}
-.feature {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90px;
-  height: 140px;
-  flex-basis: auto;
-  text-align: center;
-  font-weight: normal;
-}
-.feature-icon {
-  mask-position: 0px bottom;
-  -webkit-mask-position: 0px bottom;
-  mask-size: contain;
-  -webkit-mask-size: contain;
-  background-color: var(--alternate);
-  width: 45px;
-  height: 45px;
-  margin-bottom: 10px;
-  display: flex;
-  align-self: center;
-  margin-left: auto;
-  margin-right: auto;
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-}
-.feature-natural {
-  mask-image: url(/static/img/leaf.svg);
-  -webkit-mask-image: url(/static/img/leaf.svg);
-}
-.feature-sugar {
-  mask-image: url(/static/img/no-azucar.svg);
-  -webkit-mask-image: url(/static/img/no-azucar.svg);
-}
-.feature-chem {
-  mask-image: url(/static/img/no-chem.svg);
-  -webkit-mask-image: url(/static/img/no-chem.svg);
-}
-.feature p {
-  font-family: var(--rubik);
-  font-size: 1em;
-  line-height: 1.3;
-  margin-bottom: 0;
-}
 /* Products */
 .products-style {
-  padding-top: 0;
+  padding-top: 5em;
+  gap: var(--gap-md);
 }
 .product {
-  max-width: 85vw;
   scroll-margin-top: 5em;
+  border-radius: 8px;
+  border: 1px solid var(--gray);
+  overflow: hidden;
+  max-width: 24em;
 }
-.product > a.opciones {
-  margin-left: auto;
-  margin-right: auto;
+.product-image {
+  height: 300px;
+  width: 100%;
 }
-img.product-img {
-  background-color: var(--background-color-softer);
-  width: var(--prod-img-size);
-  height: var(--prod-img-size);
-  border-radius: 100%;
-  margin-bottom: 1.4em;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0px 1.6px 1.1px -29px rgba(0, 0, 0, 0.086),
-    0px 3.9px 9.6px -29px rgba(0, 0, 0, 0.103),
-    0px 7.4px 27.7px -29px rgba(0, 0, 0, 0.112),
-    0px 14.1px 45.4px -29px rgba(0, 0, 0, 0.13),
-    0px 35px 50px -29px rgba(0, 0, 0, 0.24);
+.product-image img {
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
 }
-.product-content > p {
+.product-content {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  gap: var(--gap-md);
+  background-color: white;
+}
+.product-name h3 {
+  text-transform: unset;
+  font-size: 2rem;
+  text-align: center;
+}
+.product-description p {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
-  text-align: center;
 }
-.product-content > h2 {
-  letter-spacing: 1px;
-  font-size: 3.1rem;
-}
-.product-content a.opciones {
-  text-decoration: none;
-  margin-top: 10px;
-  height: max-content;
-  padding: 0.6em 0;
-  font-size: 1em;
-  letter-spacing: 0.08rem;
-  text-transform: unset;
-  border-radius: 50px;
-  color: black;
+.product-cuts {
+  border-top: 1px solid var(--gray);
+  padding: 2em;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: space-between;
   background-color: white;
-  border: 1px solid black;
-  transition-property: background-color, color;
-  transition-duration: var(--duration);
-  transition-timing-function: ease;
-  display: block;
-  margin-inline: auto;
-  text-align: center;
-  width: 250px;
 }
+.product-cut {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.product-cut .shape {
+  width: 40px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-cut .shape div {
+  aspect-ratio: 1;
+}
+div[data-available="false"] {
+  background-color: var(--gray);
+}
+div[data-available="true"] {
+  background-color: black;
+}
+.rebanadas {
+  width: var(--rebanada);
+  border-radius: 50%;
+}
+.tajadas {
+  width: calc(var(--rebanada) / 2);
+  height: var(--rebanada);
+  border-radius: 10rem 0 0 10rem;
+}
+.cubos {
+  width: calc(var(--rebanada) / 1.5);
+  border-radius: 4px;
+}
+.migas {
+  width: calc(var(--rebanada) / 2);
+  border-radius: 4px;
+  rotate: 45deg;
+}
+.polvo {
+  width: calc(var(--rebanada) / 4);
+  border-radius: 50%;
+}
+.product-cut-name {
+  font-size: 1.5rem;
+}
+
+
+
+
 .product-content > a.opciones:hover,
 .product-content > a.opciones:active,
 .product-content > a.opciones:focus {
@@ -696,7 +665,7 @@ img.product-img {
   margin-inline: auto;
   justify-content: space-around;
   align-items: center;
-  gap: var(--flex-gap);
+  gap: var(--gap-sm);
 }
 .product,
 .service,
@@ -749,7 +718,7 @@ img.product-img {
 }
 .stories {
   display: flex;
-  gap: var(--flex-gap);
+  gap: var(--gap-sm);
   flex-direction: column;
   margin-top: 3em;
   width: 90vw;
@@ -1016,9 +985,6 @@ footer a {
     height: 50px;
     margin-top: -5px;
   }
-  .product {
-    max-width: 26em;
-  }
 }
 @media (min-width: 690px) {
   nav > ul > li {
@@ -1043,9 +1009,6 @@ footer a {
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 900px;
-  }
-  .product {
-    max-width: 24em;
   }
   .product-content > p {
     padding-inline: 1em;
