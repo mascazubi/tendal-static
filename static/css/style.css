@@ -25,7 +25,7 @@ html {
   --prod-img-size: 250px;
   --prod-shadow-size: -20px -10px 0;
    /* properties */
-  --section-block-spacing: 4em;
+  --section-block-spacing: 5em;
   --gap-sm: .8em;
   --gap-md: 2em;
   --gap-lg: 4em;
@@ -461,64 +461,76 @@ div[data-available="true"] {
   text-align: center;
 }
 .services {
-  background-color: red;
+  background: linear-gradient(#161655d4, #521375f5), url(/static/img/bandejas3.jpg.webp);
+  background-position: bottom center;
+  background-size: cover;
 }
 .service {
-  width:90vw;
-  background-color: white;
-}
-.service-extra {
-  padding: 1em 1.5em;
-  text-align: center;
-  margin-bottom: 2em;
-}
-.service-header {
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 250px;
   display: flex;
-  align-items: end;
-  overflow: hidden;
-}
-.service-desi {
-  background-image: linear-gradient(to bottom, transparent, rgba(117, 19, 93, 0.73)), url(/static/img/bandejas3.jpg.webp);
-}
-.service-secado {
-  background-image: linear-gradient(to bottom, transparent, rgba(9, 114, 96, 0.73)), url(/static/img/secado.webp);
-}
-.service-header > h3 {
+  flex-direction: column;
+  gap: var(--gap-md);
+  padding-inline: 1em;
   color: white;
-  padding: 1em;
 }
-.service > p {
-  padding: 1.5em;
+.qualities {
+ padding-inline: 1em;
 }
-.services > h3
-.qualities > h3 {
-  padding-bottom: 1em;
-}
-.services > p,
 .qualities > p {
-  margin-top: 1em;
-  margin-bottom: 2em;
   text-align: center;
   margin-inline: auto;
-  max-width: 70ch;
 }
 .qualities > p {
-  padding: 1em 1.5em;
+  padding-inline: 1em;
 }
-.services-layout,
 .qualities-layout {
   display: flex;
   flex-direction: column;
-  margin-inline: auto;
   justify-content: space-around;
   align-items: center;
   gap: var(--gap-sm);
 }
-.service,
-.quality,
+.quality {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  height: 690px;
+  border-radius: 8px;
+  justify-content: end;
+  color: white;
+  gap: var(--gap-sm);
+}
+.energy {
+  background: url(/static/img/fuente-de-energia.jpg);
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-position-y: 180%;
+  background-color: black;
+}
+.harvest {
+  background: linear-gradient(#0000, #0000008f), url(/static/img/cosecha.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.higene {
+  background: linear-gradient(#07224885, #072248), url(/static/img/bandejas2.jpg.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.nosotros {
+  background: linear-gradient(#0404047a, #000), url(/static/img/sol.webp);
+  background-position: bottom center;
+  background-size: cover;
+}
+.nosotros-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+  padding-inline: 1em;
+  color: white;
+}
 .value {
   display: flex;
   flex-direction: column;
@@ -529,8 +541,6 @@ div[data-available="true"] {
     margin-top: 0.6em;
     margin-inline: auto;
 }
-.service > h3,
-.quality > h3,
 .value > h3 {
   text-align: center;
   margin-bottom: 1rem;
@@ -538,11 +548,6 @@ div[data-available="true"] {
   width: 90vw;
   margin-inline: auto;
 }
-.quality > p {
-  margin-top: .5em;
-  text-align: center;
-}
-.quality > img,
 .value > img {
   background-color: transparent;
   width: var(--prod-img-size);
@@ -551,16 +556,6 @@ div[data-available="true"] {
   margin-bottom: 1.5em;
   margin-left: auto;
   margin-right: auto;
-}
-.qualities {
-  position: relative;
-}
-.quality {
-  max-width: 85vw;
-}
-.quality-style {
-  background-color: white;
-  color: black;
 }
 .us-style {
   padding-bottom: 1em;
