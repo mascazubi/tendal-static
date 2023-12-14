@@ -29,9 +29,11 @@ html {
   --gap-sm: .8em;
   --gap-md: 2em;
   --gap-lg: 4em;
+  --gap-xl: 6em;
   --duration: 0.3s;
   --radius:4px;
   --rebanada: 90%;
+  --max-page-width: 1920px;
 
 }
 ::selection {
@@ -293,6 +295,8 @@ section > p {
   gap: var(--gap-md);
   justify-content: center;
   flex-wrap: wrap;
+  max-width: var(--max-page-width);
+  margin-inline: auto;
 }
 .product {
   display: flex;
@@ -494,16 +498,19 @@ section > p {
 }
 .steps {
   display: flex;
-  flex-direction: column;
-  gap: var(--gap-lg);
+  gap: var(--gap-xl);
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: vr(--max-page-width);
+  margin-inline: auto;
 }
 .step {
   display: flex;
   flex-direction: column;
   gap: var(--gap-sm);
   align-items: center;
-  max-width: 40ch;
+  max-width: 36ch;
 }
 .step img {
   width: 80%;
@@ -518,13 +525,18 @@ section > p {
   background: linear-gradient(#161655d4, #521375f5), url(/static/img/bandejas3.jpg.webp);
   background-position: bottom center;
   background-size: cover;
+  display: grid;
+  grid-template-columns: 1.5fr repeat(6,1fr) 1.5fr;
+  color: white;
+  grid-template-areas:
+"left one two three four five six right";
 }
 .service {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
   padding-inline: 1em;
-  color: white;
+  gap: var(--gap-md);
+  grid-area: auto / left / auto / right;
 }
 .qualities {
  padding-inline: 1em;
@@ -547,6 +559,8 @@ section > p {
   align-items: center;
   justify-content: center;
   gap: var(--gap-sm);
+  max-width: var(--max-page-width);
+  margin-inline: auto;
 }
 .quality {
   display: flex;
@@ -557,7 +571,7 @@ section > p {
   justify-content: end;
   color: white;
   gap: var(--gap-sm);
-  width: clamp(320px, 90vw, 23em);
+  width: clamp(300px, 90vw, 25%);
 }
 .energy {
   background: url(/static/img/fuente-de-energia.jpg);
@@ -1009,14 +1023,9 @@ footer a {
     margin-left: auto;
     margin-right: auto;
   }
-  .service {
-    max-width: 48em;
-    align-items: start;
-    align-self: end;
-  }
-  .quality {
+  /* .quality {
     max-width: 35%;
-  }
+  } */
   .service > h3, .quality > h3, .value > h3 {
     width: auto;
   }
@@ -1100,9 +1109,9 @@ footer a {
   .offer-img {
     background-size: 58%;
   }
-  .quality {
+  /* .quality {
     max-width: 26%;
-  }
+  } */
   .story {
     max-width: 1160px;
   }
@@ -1150,10 +1159,6 @@ footer a {
     margin-left: auto;
     margin-right: auto;
     max-width: 1320px;
-  }
-  .service-header > h3,
-  .service > p {
-    padding: 50px;
   }
 }
 @media (min-width: 1480px) {
