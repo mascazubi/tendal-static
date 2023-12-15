@@ -136,7 +136,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: var(--gap-md);
-  padding-block: 4em;
+  padding-block: clamp(4em, 10vw, 6em);
   padding-inline: 1em;
   color: white;
   background-color: black;
@@ -163,7 +163,7 @@ a {
   text-align: center;
 }
 .hero-tag h1 {
-  font-size: 3.5rem;
+  font-size: clamp(3.5rem, 10vw, 5rem);
 }
 .hero-features {
   display: flex;
@@ -525,18 +525,47 @@ section > p {
   background: linear-gradient(#161655d4, #521375f5), url(/static/img/bandejas3.jpg.webp);
   background-position: bottom center;
   background-size: cover;
-  display: grid;
-  grid-template-columns: 1.5fr repeat(6,1fr) 1.5fr;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
-  grid-template-areas:
-"left one two three four five six right";
+  padding-inline: 1em;
+}
+.service-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width:calc(var(--max-page-width) - 300px);
 }
 .service {
   display: flex;
   flex-direction: column;
-  padding-inline: 1em;
   gap: var(--gap-md);
-  grid-area: auto / left / auto / right;
+  text-align: center;
+  width: clamp(200px, 100%, 45em);
+}
+@media (width >= 1200px) {
+  .services {
+    background: linear-gradient(to right, #161655de, #521375), url(/static/img/bandejas3.jpg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-inline: 4em;
+  }
+  .service-layout {
+    align-items: end;
+  }
+  .service {
+    text-align: left;
+  }
+  .service h2 {
+    text-align: left;
+  }
+  .service .button {
+    max-width: max-content;
+  }
 }
 .qualities {
  padding-inline: 1em;
@@ -597,14 +626,46 @@ section > p {
   background: linear-gradient(#0404047a, #000), url(/static/img/sol.webp);
   background-position: bottom center;
   background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-inline: 1em;
+}
+.nosotros-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width:calc(var(--max-page-width) - 300px);
 }
 .nosotros-content {
   display: flex;
   flex-direction: column;
   gap: var(--gap-md);
-  padding-inline: 1em;
-  color: white;
+  text-align: center;
+  width: clamp(200px, 100%, 45em);
 }
+@media (width >= 1200px) {
+  .nosotros {
+    background: linear-gradient(to left, #0404047a, #000), url(/static/img/sol.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-inline: 4em;
+  }
+  .nosotros-layout {
+    align-items: start;
+  }
+  .nosotros-content {
+    text-align: left;
+  }
+  .nosotros-content h2 {
+    text-align: left;
+  }
+}
+
 .value {
   display: flex;
   flex-direction: column;
@@ -724,33 +785,6 @@ input.accordion:checked ~ .tab-content {
   max-height: 100vh;
   padding: 1em;
 }
-/* .form {
-  display: flex;
-  flex-direction: column;
-}
-.name-email {
-  display: flex;
-  flex-direction: column;
-}
-#message {
-  width: 100%;
-  height: 114px;
-}
-.contact-form-container {
-  margin-bottom: 4em;
-} */
-.map-container {
-  margin-bottom: 3em;
-  width: 90vw;
-  margin-inline: auto;
-  max-width: 1370px;
-}
-.map {
-  height: 400px;
-  margin-bottom: 2em;
-  margin-top: 2px;
-  margin-inline: auto;
-}
 .info {
   display: flex;
   flex-direction: column;
@@ -818,7 +852,8 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--gap-md)
+  gap: var(--gap-md);
+  padding-inline: 4em;
 }
 .footer-item {
   display: flex;
@@ -826,6 +861,9 @@ footer {
   gap: var(--gap-lg);
   justify-content: center;
   align-items: start;
+}
+.footer-item.copy {
+  justify-content: center;
 }
 .footer-logo {
   height: 6em;
@@ -837,6 +875,7 @@ footer {
 }
 .footer-col ul {
   list-style: none;
+  text-align: center;
 }
 .footer-col.col-1 ul {
   columns: 2;
@@ -844,11 +883,16 @@ footer {
 .footer-col.col-2 ul {
   columns: 1;
 }
-footer p,
-footer a > span {
-  font-family: var(--heading-font);
-  font-size: 1.3rem;
-  margin-bottom: 0;
+@media (width >= 800px) {
+  .footer-item {
+    flex-direction: row;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .footer-col ul {
+    text-align: left;
+  }
 }
 footer a {
   line-height: 1;
@@ -899,8 +943,9 @@ footer a {
   visibility: visible;
   opacity: 1;
 }
-.copy {
+.copy p {
   margin-top: 3em;
+  opacity: 0.5;
 }
 /* Larger than mobile (default point when grid becomes active) */
 @media (min-width: 350px) {
@@ -1078,9 +1123,6 @@ footer a {
 
 /* Larger than tablet */
 @media (min-width: 1200px) {
-  h3 {
-    font-size: 2.8rem;
-  }
   .hero-img-container {
     width: 45vw;
   }
