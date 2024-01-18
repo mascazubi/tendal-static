@@ -287,16 +287,15 @@ section > p {
   max-width: 75ch;
 }
 /* Products */
-.products-style {
-  gap: var(--gap-md);
+section.products {
+  padding-inline: calc(1em + 1vw);
+  align-items: center;
 }
 .products-layout {
-  display: flex;
+  display: grid;
   gap: var(--gap-md);
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: var(--max-page-width);
-  margin-inline: auto;
+  grid-template-columns: repeat(auto-fit, minmax(425px,1fr));
+  /* max-width: 1920px; */
 }
 .product {
   display: flex;
@@ -305,7 +304,7 @@ section > p {
   border-radius: 8px;
   border: 1px solid var(--gray);
   overflow: hidden;
-  width: clamp(320px, 90vw, 23em);
+  /* width: clamp(320px, 90vw, 23em); */
 }
 .product-image {
   height: 300px;
@@ -339,8 +338,7 @@ section > p {
   padding: 1.5em;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0.5em;
+  gap: var(--gap-sm);
   justify-content: space-evenly;
   background-color: white;
 }
@@ -548,7 +546,7 @@ section > p {
 }
 @media (width >= 1200px) {
   .services {
-    background: linear-gradient(to right, #161655de, #521375), url(/static/img/bandejas3.jpg.webp);
+    background: linear-gradient(to right, #161655a2, #521375), url(/static/img/bandejas3.jpg.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
