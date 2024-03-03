@@ -26,7 +26,7 @@ html {
   --prod-shadow-size: -20px -10px 0;
    /* properties */
   --section-block-spacing: 5em;
-  --gap-sm: .8em;
+  --gap-sm: 0.2em;
   --gap-md: 2em;
   --gap-lg: 4em;
   --gap-xl: 6em;
@@ -290,12 +290,13 @@ section > p {
 section.products {
   padding-inline: calc(1em + 1vw);
   align-items: center;
+  max-width: 1920px;
+  margin-inline: auto;
 }
 .products-layout {
   display: grid;
   gap: var(--gap-md);
-  grid-template-columns: repeat(auto-fit, minmax(425px,1fr));
-  /* max-width: 1920px; */
+  grid-template-columns: repeat(auto-fit, minmax(370px,1fr));
 }
 .product {
   display: flex;
@@ -335,7 +336,7 @@ section.products {
 }
 .product-cuts {
   border-top: 1px solid var(--gray);
-  padding: 1.5em;
+  padding: 1.5em 1em;
   display: flex;
   flex-direction: row;
   gap: var(--gap-sm);
@@ -358,17 +359,23 @@ section.products {
 }
 .shape-container[data-available="false"] .shape,
 .shape-container[data-available=""] .shape  {
-  background-color: var(--gray);
+  --shape-color: var(--gray);
+  background-color: var(--shape-color);
 }
 .shape-container[data-available="false"] + .product-cut-name,
 .shape-container[data-available=""] + .product-cut-name  {
-  color: var(--gray);
+  --shape-color: var(--gray);
+  color: var(--shape-color);
 }
 .shape-container[data-available="true"] .shape {
-  background-color: black;
+  --shape-color: black;
+  background-color: var(--shape-color);
+  /* outline: 2px solid var(--shape-color);
+  outline-offset: 2px; */
 }
 .shape-container[data-available="true"] + .product-cut-name {
-  color: black;
+  --shape-color: black;
+  color: var(--shape-color);
 }
 .shape {
   aspect-ratio: 1;
@@ -520,7 +527,7 @@ section.products {
   text-align: center;
 }
 .services {
-  background: linear-gradient(#161655d4, #521375f5), url(/static/img/bandejas3.jpg.webp);
+  background: url(/static/img/bandejas3.jpg.webp);
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -529,6 +536,13 @@ section.products {
   align-items: center;
   color: white;
   padding-inline: 1em;
+  position: relative;
+}
+.services::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(#161655d4, #521375);
 }
 .service-layout {
   display: flex;
@@ -536,6 +550,7 @@ section.products {
   align-items: center;
   width: 100%;
   max-width:calc(var(--max-page-width) - 300px);
+  z-index: 2;
 }
 .service {
   display: flex;
@@ -546,11 +561,13 @@ section.products {
 }
 @media (width >= 1200px) {
   .services {
-    background: linear-gradient(to right, #161655a2, #521375), url(/static/img/bandejas3.jpg.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(/static/img/bandejas3.jpg.webp);
     padding-inline: 4em;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .services::after {
+    background: linear-gradient(to right, #161655d4, #161655 35%, #521375);
   }
   .service-layout {
     align-items: end;
@@ -563,6 +580,14 @@ section.products {
   }
   .service .button {
     max-width: max-content;
+  }
+}
+@media (width >= 2560px) {
+  .services {
+    background-position: 20%;
+  }
+  .services::after {
+    background: linear-gradient(to right, #161655 15%, #161655d6 25%, #161655 40%, #521375);
   }
 }
 .qualities {
@@ -588,6 +613,11 @@ section.products {
   gap: var(--gap-sm);
   max-width: var(--max-page-width);
   margin-inline: auto;
+}
+@media (width >= 1200px) {
+  .qualities-layout {
+    gap: 15px;
+  }
 }
 .quality {
   display: flex;
