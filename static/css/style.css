@@ -327,13 +327,6 @@ section h2 {
   margin-right: auto;
 }
 
-.opciones > span {
-  font-size: 1.5em;
-  margin-right: 6px;
-  line-height: 1;
-  margin-bottom: auto;
-}
-
 img.product-img {
   background-color: var(--background-color-softer);
   width: var(--prod-img-size);
@@ -359,7 +352,7 @@ img.product-img {
   font-size: 3.1rem;
 }
 .product-content a.opciones {
-text-decoration: none;
+  text-decoration: none;
   margin-top: 10px;
   height: max-content;
   padding: 0.6em 2em;
@@ -367,7 +360,7 @@ text-decoration: none;
   text-transform: unset;
   border-radius: 50px;
   color: black;
-  background-color: #ffffff7d;
+  background-color: transparent;
   transition-property: background-color, color;
   transition-duration: var(--duration);
   transition-timing-function: ease;
@@ -382,8 +375,7 @@ text-decoration: none;
 .product-content > a.opciones:hover,
 .product-content > a.opciones:active,
 .product-content > a.opciones:focus {
-  background-color: black;
-  color: white;
+  background-color: rgba(3, 122, 19, 0.24);
 }
 [id^="modal"] {
   display: none;
@@ -1351,4 +1343,12 @@ footer a {
   .values-layout {
     max-width: 880px;
   }
+}
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  margin-left: 4px;
 }
