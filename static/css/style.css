@@ -5,8 +5,8 @@ html {
   --rubik: "Rubik", Helvetica, Arial, sans-serif;
   /* brnad colors */
   --primary: hsl(30, 50%, 93%);
-  --accent: hsl(13, 94%, 63%);
-  --secondary: hsl(336, 12%, 44%);
+  --accent: #f1a518;
+  --secondary: #325525;
   --alternate: hsl(187, 24%, 44%);
   /* logo */
   --logo-color: black;
@@ -283,7 +283,7 @@ section h2 {
   -webkit-mask-position: 0px bottom;
   mask-size: contain;
   -webkit-mask-size: contain;
-  background-color: var(--alternate);
+  background-color: var(--secondary);
   width: 45px;
   height: 45px;
   margin-bottom: 10px;
