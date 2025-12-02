@@ -231,8 +231,8 @@ section h2 {
 .hero-img-wrapper::before {
   content: '';
   position: absolute;
-  height: 40%;
-  width: 38%;
+  height: 50%;
+  width: 44%;
   mask-position: 0px bottom;
   -webkit-mask-position: 0px bottom;
   mask-size: contain;
@@ -240,16 +240,16 @@ section h2 {
   background-color: var(--accent);
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
-  mask-image: url(/static/img/tendal-sun.svg);
-  -webkit-mask-image: url(/static/img/tendal-sun.svg);
+  mask-image: url(/static/img/tendal-sun2.svg);
+  -webkit-mask-image: url(/static/img/tendal-sun2.svg);
   z-index: -1;
-  top:0;
-  right: 0;
-  transform: rotate(0deg);
-  mask-border: unset;
+  top: -25px;
+  right: -16px;
+  transform: rotate(5deg);
 }
 .hero-img-container img {
   width: 100%;
+  filter: drop-shadow(-7px 23px 16px #5f3f0326);
 }
 .hero-content h1 {
   text-align: center;
