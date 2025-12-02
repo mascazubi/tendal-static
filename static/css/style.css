@@ -88,7 +88,7 @@ a {
   margin: 1.8em auto 1.5em;
 }
 .logo {
-  width: clamp(8em,34vw,14em);
+  width: clamp(11em,34vw,14em);
   aspect-ratio: 1;
   mask-position: center;
   mask-size: contain;
@@ -208,10 +208,11 @@ section h2 {
   flex-direction: column;
   margin-top: 1em;
   width: 100%;
+  padding-top: 3.5em;
 }
 .hero-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
