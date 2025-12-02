@@ -23,8 +23,8 @@ html {
   --prod-img-size: 250px;
   --prod-shadow-size: -20px -10px 0;
    /* properties */
-  --section-block-spacing: 3em;
-  --flex-gap: 60px;
+  --section-block-spacing: 6em;
+  --flex-gap: 6em;
   --duration: 0.3s;
   --radius:4px;
 }
@@ -215,6 +215,7 @@ section h2 {
   margin-left: auto;
   margin-right: auto;
   padding-inline: 0.8em;
+  gap: 2em;
 }
 .hero-img-container {
   /* shape-outside: url(/static/img/mix.png.webp); */
@@ -318,7 +319,7 @@ section h2 {
 }
 .product {
   max-width: 85vw;
-  scroll-margin-top: 5em;
+  scroll-margin-top: 3em;
 }
 .product > a.opciones {
   margin-left: auto;
@@ -517,7 +518,7 @@ img.product-img {
 }
 .offer {
   color: white;
-  margin-top: 2em;
+  margin-top: 4em;
 }
 .offer-img {
   background-image: url(/static/img/offerta-img.jpg.webp);
@@ -527,12 +528,10 @@ img.product-img {
   position: relative;
   display: flex;
   justify-content: center;
-  width: 90vw;
-  max-width: 995px;
+  width: 96%;
   height: 520px;
   background-color: var(--alternate);
   margin-inline: auto;
-  max-width: 995px;
 }
 .offer-content {
   position: relative;
@@ -1169,10 +1168,10 @@ footer a {
   .offer-img{
     background-size: 70%;
     background-repeat: repeat-x;
-    height: 470px;
+    height: 520px;
   }
   .offer-content {
-    max-width: 670px;
+    max-width: 760px;
     text-shadow: none;
   }
   .offer-content > p {
