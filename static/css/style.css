@@ -87,18 +87,14 @@ a {
   margin: 1.8em auto 1.5em;
 }
 .logo {
-  height: 10em;
-  mask-position: 0px bottom;
-  -webkit-mask-position: 0px bottom;
+  width: clamp(8em,34vw,14em);
+  aspect-ratio: 1;
+  mask-position: center;
   mask-size: contain;
-  -webkit-mask-size: contain;
   background-color: var(--logo-color);
-  width: 10em;
   margin-bottom: 10px;
   mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
   mask-image: url(/static/img/tendal-logo-flat.svg);
-  -webkit-mask-image: url(/static/img/tendal-logo-flat.svg);
   color: var(--logo-color);
 }
 nav {
