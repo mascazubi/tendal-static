@@ -451,6 +451,7 @@ img.product-img {
   line-height: 1;
 }
 .op-item-price {
+  display: none;
   font-family: var(--rubik);
   font-size: 1.3em;
   font-weight: 600;
