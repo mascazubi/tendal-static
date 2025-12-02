@@ -63,21 +63,22 @@ color: var(--accent);
   color: var(--secondary);
 }
 a {
-  text-decoration: none;
+
   color: inherit;
 }
 .body-link {
   font-weight: inherit;
   cursor: pointer;
   text-decoration: underline;
-  text-decoration-color: transparent;
   text-decoration-thickness: 2px;
-  color: var(--accent);
-  transition: text-decoration-color var(--duration) linear;
-  font-weight: medium;
+  color: var(--secondary);
+  font-weight: normal;
+  border-radius: 4px;
+  padding: 2px;
 }
 .body-link:hover {
   text-decoration-color: var(--accent);
+  background-color: var(--accent);
 }
 .body-link-ext:after {
   content: "\2197\FE0E";
