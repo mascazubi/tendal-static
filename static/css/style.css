@@ -325,6 +325,14 @@ section h2 {
   margin-left: auto;
   margin-right: auto;
 }
+
+.opciones > span {
+  font-size: 1.5em;
+  margin-right: 6px;
+  line-height: 1;
+  margin-bottom: auto;
+}
+
 img.product-img {
   background-color: var(--background-color-softer);
   width: var(--prod-img-size);
@@ -350,25 +358,26 @@ img.product-img {
   font-size: 3.1rem;
 }
 .product-content a.opciones {
-  text-decoration: none;
+text-decoration: none;
   margin-top: 10px;
   height: max-content;
-  padding: 0.6em 0;
+  padding: 0.6em 2em;
   font-size: 1em;
-  letter-spacing: 0.08rem;
   text-transform: unset;
   border-radius: 50px;
   color: black;
-  background-color: white;
-  border: 1px solid black;
+  background-color: #ffffff7d;
   transition-property: background-color, color;
   transition-duration: var(--duration);
   transition-timing-function: ease;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-inline: auto;
   text-align: center;
-  width: 250px;
+  width: max-content;
 }
+
 .product-content > a.opciones:hover,
 .product-content > a.opciones:active,
 .product-content > a.opciones:focus {
@@ -704,7 +713,7 @@ img.product-img {
 .product-content > h2 {
     text-align: center;
     margin-bottom: 1rem;
-    margin-top: 0.6em;
+    margin-top: 0.2em;
     margin-inline: auto;
 }
 .service > h3,
