@@ -348,6 +348,7 @@ img.product-img {
   margin-right: auto;
   margin-bottom: 1.5em;
   text-align: center;
+  color: dimgray;
 }
 .product-content > h2 {
   letter-spacing: 1px;
@@ -1046,6 +1047,7 @@ footer a {
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 900px;
+    align-items: start;
   }
   .product {
     max-width: 24em;
