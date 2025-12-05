@@ -361,7 +361,7 @@ img.product-img {
   text-transform: unset;
   border-radius: 50px;
   color: black;
-  background-color: transparent;
+  background-color: #ffffff42;
   transition-property: background-color, color;
   transition-duration: var(--duration);
   transition-timing-function: ease;
