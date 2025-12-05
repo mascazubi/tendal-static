@@ -247,9 +247,6 @@ section h2 {
   top: -25px;
   right: -16px;
   transform: rotate(10deg);
-  animation-name: flash;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
 }
 .hero-img-container img {
   width: 100%;
@@ -1358,16 +1355,4 @@ footer a {
   'GRAD' 0,
   'opsz' 24;
   margin-left: 4px;
-}
-
-@keyframes flash {
-  0% {
-    background-color: var(--accent);
-  }
-  50% {
-    background-color: transparent;
-  }
-  100% {
-    background-color: var(--accent);
-  }
 }
