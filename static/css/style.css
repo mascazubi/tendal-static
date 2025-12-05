@@ -399,7 +399,7 @@ img.product-img {
 .card {
   border-radius: var(--radius);
   border: 1px solid black;
-  box-shadow: 8px 8px 0px black, 9px 10px 20px #000000a3;
+  box-shadow: 8px 8px 0px black;
   overflow: hidden;
 }
 .items {
@@ -415,6 +415,9 @@ img.product-img {
 .op {
   background-color: var(--secondary);
   color: white;
+}
+.op.card {
+  box-shadow:  8px 8px 0px black, 9px 10px 20px #000000a3;
 }
 .op-items {
   margin-top: -25px;
