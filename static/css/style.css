@@ -195,6 +195,7 @@ main {
   scroll-behavior: smooth;
   max-width: 1400px;
   margin-inline: auto;
+  overflow-x: hidden;
 }
 section {
   padding-block: var(--section-block-spacing);
